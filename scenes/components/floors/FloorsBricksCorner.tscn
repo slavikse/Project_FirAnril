@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba16fscr17i8r"]
+
+[ext_resource type="PackedScene" uid="uid://1ap53exopsir" path="res://scenes/components/floors/models/brick_floor/scene.gltf" id="1_wt6er"]
+
+[node name="FloorsBricksCorner" type="Node3D"]
+metadata/_edit_group_ = true
+
+[node name="BrickFloor_1" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_2" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_3" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_4" parent="." instance=ExtResource("1_wt6er")]
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_5" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_6" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_7" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+metadata/_edit_lock_ = true
+
+[node name="BrickFloor_8" parent="." instance=ExtResource("1_wt6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+metadata/_edit_lock_ = true

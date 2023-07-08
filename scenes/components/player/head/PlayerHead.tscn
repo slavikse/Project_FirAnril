@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv2f6dlowali1"]
+
+[ext_resource type="Script" path="res://scenes/components/player/head/PlayerHead.gd" id="1_ccmog"]
+
+[sub_resource type="Sky" id="Sky_x5p8f"]
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_olkhm"]
+sky = SubResource("Sky_x5p8f")
+glow_enabled = true
+fog_light_color = Color(1, 1, 1, 1)
+fog_light_energy = 0.01
+fog_sky_affect = 0.5
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_emission_energy = 0.5
+volumetric_fog_sky_affect = 0.2
+adjustment_enabled = true
+
+[sub_resource type="CameraAttributesPhysical" id="CameraAttributesPhysical_5j7p7"]
+frustum_focal_length = 12.0
+
+[node name="PlayerHead" type="Camera3D"]
+process_mode = 3
+environment = SubResource("Environment_olkhm")
+attributes = SubResource("CameraAttributesPhysical_5j7p7")
+current = true
+script = ExtResource("1_ccmog")
+metadata/_edit_lock_ = true
+
+[node name="Illumination" type="OmniLight3D" parent="."]
+light_energy = 0.2
+light_specular = 0.2
+distance_fade_enabled = true
+omni_range = 2.0
+metadata/_edit_lock_ = true

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dolj6kux70jbf"]
+
+[ext_resource type="Script" path="res://scenes/components/player/Player.gd" id="1_yh0lt"]
+[ext_resource type="PackedScene" uid="uid://bv2f6dlowali1" path="res://scenes/components/player/head/PlayerHead.tscn" id="2_n2jil"]
+[ext_resource type="PackedScene" uid="uid://blinex6lcs3gq" path="res://scenes/components/player/body/PlayerBody.tscn" id="3_ohco1"]
+[ext_resource type="PackedScene" uid="uid://cs6to33txaq4a" path="res://scenes/components/player/legs/PlayerLegs.tscn" id="4_de0gd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c4qi7"]
+radius = 0.517133
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+disable_mode = 2
+collision_mask = 2
+platform_floor_layers = 4278190082
+platform_wall_layers = 2
+script = ExtResource("1_yh0lt")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_c4qi7")
+metadata/_edit_lock_ = true
+
+[node name="PlayerHead" parent="." instance=ExtResource("2_n2jil")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.4)
+
+[node name="PlayerBody" parent="." instance=ExtResource("3_ohco1")]
+
+[node name="PlayerLegs" parent="." instance=ExtResource("4_de0gd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+metadata/_edit_lock_ = true

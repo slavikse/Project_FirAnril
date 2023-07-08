@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://blinex6lcs3gq"]
+
+[ext_resource type="Script" path="res://scenes/components/player/body/PlayerBody.gd" id="1_olap0"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7erwl"]
+
+[node name="PlayerBody" type="Node3D"]
+script = ExtResource("1_olap0")
+metadata/_edit_lock_ = true
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_7erwl")
+metadata/_edit_lock_ = true

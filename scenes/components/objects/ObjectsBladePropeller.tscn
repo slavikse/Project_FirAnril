@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cva11xlcydc8q"]
+
+[ext_resource type="PackedScene" uid="uid://dpehxenkajxqr" path="res://scenes/components/objects/models/tri-blade_propeller/scene.gltf" id="1_ueyiu"]
+
+[sub_resource type="Animation" id="Animation_o5iic"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scene:rotation:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xty3a"]
+resource_name = "rotate"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scene:rotation:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 6.28319, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 10)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2k085"]
+_data = {
+"RESET": SubResource("Animation_o5iic"),
+"rotate": SubResource("Animation_xty3a")
+}
+
+[node name="ObjectsBladePropeller" type="Node3D"]
+transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="scene" parent="." instance=ExtResource("1_ueyiu")]
+metadata/_edit_lock_ = true
+
+[node name="Rotation" type="AnimationPlayer" parent="."]
+autoplay = "rotate"
+libraries = {
+"": SubResource("AnimationLibrary_2k085")
+}
