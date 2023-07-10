@@ -12,9 +12,14 @@ const _MOUSE_SENSITIVITY := 0.15
 func _physics_process(delta: float) -> void:
     var is_floor := is_on_floor()
     var is_wall := is_on_wall()
-    velocity = _player_body_node.movement(is_floor, is_wall, velocity, transform.basis, delta)
-    velocity = _player_legs_node.jumping(is_floor, is_wall, velocity)
+    var move_direction := _get_move_direction()
+    velocity = _player_body_node.movement(is_floor, is_wall, velocity, move_direction, delta)
+    velocity = _player_legs_node.jumping(is_floor, is_wall, velocity, move_direction, delta)
     move_and_slide()
+
+func _get_move_direction() -> Vector3:
+    var input_dir := Input.get_vector('move_left', 'move_right', 'move_forward', 'move_back')
+    return (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 func _input(event: InputEvent) -> void:
     if event is InputEventMouseMotion:
