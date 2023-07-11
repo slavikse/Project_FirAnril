@@ -3,6 +3,7 @@ class_name PlayerHead
 
 const _DOWN_LIMIT := -80.0
 const _TOP_LIMIT := 90.0
+const _MOUSE_SENSITIVITY := 0.15
 
 var _is_mouse_captured := true
 
@@ -24,6 +25,7 @@ func _pause_switch(input_mode: Input.MouseMode) -> void:
     Input.set_mouse_mode(input_mode)
     G.scene_paused(_is_mouse_captured)
 
-func vertical_rotation(relative_y: float, mouse_sensitivity: float) -> void:
-    rotate_x(deg_to_rad(-relative_y * mouse_sensitivity))
+func vertical_rotation(relative_y: float) -> float:
+    rotate_x(deg_to_rad(-relative_y * _MOUSE_SENSITIVITY))
     rotation_degrees.x = clamp(rotation_degrees.x, _DOWN_LIMIT, _TOP_LIMIT)
+    return _MOUSE_SENSITIVITY

@@ -1,8 +1,8 @@
 extends Node3D
 
 const _COLUMNS_HEIGHT_DEFAULT := -19.95
-const _COLUMNS_HEIGHT_MAX := 2 # todo
-const _COLUMNS_HEIGHT_SPEED_UP := 4.3 # todo 0.3
+const _COLUMNS_HEIGHT_MAX := 2
+const _COLUMNS_HEIGHT_SPEED_UP := 4.3 # todo set 0.3
 const _COLUMNS_HEIGHT_SPEED_DOWN := _COLUMNS_HEIGHT_SPEED_UP * 3.0
 
 var _is_columns_lifting := false

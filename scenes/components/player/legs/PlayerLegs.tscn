@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs6to33txaq4a"]
+[gd_scene load_steps=3 format=3 uid="uid://cs6to33txaq4a"]
 
 [ext_resource type="Script" path="res://scenes/components/player/legs/PlayerLegs.gd" id="1_d0aj7"]
+[ext_resource type="PackedScene" uid="uid://bmes58myfngpq" path="res://scenes/components/player/legs/dash/PlayerLegsDash.tscn" id="2_8f6bp"]
 
 [node name="PlayerLegs" type="Node3D"]
 script = ExtResource("1_d0aj7")
+metadata/_edit_lock_ = true
+
+[node name="PlayerLegsDash" parent="." instance=ExtResource("2_8f6bp")]
+
+[connection signal="dashed" from="PlayerLegsDash" to="." method="_on_player_legs_dash_dashed"]
