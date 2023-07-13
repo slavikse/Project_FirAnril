@@ -19,7 +19,7 @@ metadata/_edit_lock_ = true
 
 [node name="Glow" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.383865, 0.0353054)
-light_energy = 15.0
+light_energy = 20.0
 light_specular = 5.0
 light_bake_mode = 1
 omni_range = 1.65538

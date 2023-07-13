@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dwkdsebj02lvc" path="res://scenes/components/brick_columns/brick_column/models/brick_column/scene.gltf" id="1_dh1rv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vlod1"]
-size = Vector3(3, 5, 3)
+size = Vector3(3, 5.01525, 3)
 
 [node name="BrickColumn" type="StaticBody3D"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)

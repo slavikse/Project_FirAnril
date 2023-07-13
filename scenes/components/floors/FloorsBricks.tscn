@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1oc0t30nx6jo"]
+[gd_scene load_steps=4 format=3 uid="uid://b1oc0t30nx6jo"]
 
+[ext_resource type="Script" path="res://scenes/components/floors/FloorsBricks.gd" id="1_fqlou"]
 [ext_resource type="PackedScene" uid="uid://1ap53exopsir" path="res://scenes/components/floors/models/brick_floor/scene.gltf" id="1_wlh5p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e5678"]
@@ -9,6 +10,7 @@ size = Vector3(24, 0.161527, 24)
 collision_layer = 2
 collision_mask = 0
 input_ray_pickable = false
+script = ExtResource("1_fqlou")
 metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]

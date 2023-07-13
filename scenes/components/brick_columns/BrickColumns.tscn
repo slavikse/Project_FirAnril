@@ -7,7 +7,7 @@
 size = Vector3(48, 0.237899, 48)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w5t68"]
-size = Vector3(1, 0.286632, 1)
+size = Vector3(1, 0.343642, 1)
 
 [node name="BrickColumns" type="Area3D"]
 script = ExtResource("1_4ycpi")

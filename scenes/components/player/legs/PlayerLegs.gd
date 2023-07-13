@@ -9,6 +9,7 @@ var _jump_script := preload('./scripts/jump.gd').new()
 
 func jumping(is_floor: bool, is_wall: bool, velocity: Vector3, move_direction: Vector3, delta: float) -> Vector3:
     if Input.is_action_just_pressed('jump'):
+        # todo переменная столкновения с буфером стены. будет true, пока внутри буфера
         velocity = _jump_script.jump(is_floor, is_wall, velocity, delta)
     if Input.is_action_just_pressed('dash'):
         _player_legs_dash_node.dash_init(move_direction, is_floor, delta)
