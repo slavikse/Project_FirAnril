@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 
 # todo game name
 #const _LEVELS_FILE_NAME := "user://Project_stealth.pixsynt"

@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 
 # Универсальная функция типа: при присвоении преобразовать в нужный тип.
 func get_random_value_from_list(list: Array):

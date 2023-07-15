@@ -7,7 +7,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("scene:rotation:y")
+tracks/0/path = NodePath("ModelBladePropeller:rotation:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -23,7 +23,7 @@ loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("scene:rotation:y")
+tracks/0/path = NodePath("ModelBladePropeller:rotation:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -42,7 +42,7 @@ _data = {
 transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, 0, 0)
 metadata/_edit_group_ = true
 
-[node name="scene" parent="." instance=ExtResource("1_ueyiu")]
+[node name="ModelBladePropeller" parent="." instance=ExtResource("1_ueyiu")]
 metadata/_edit_lock_ = true
 
 [node name="Rotation" type="AnimationPlayer" parent="."]

@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1crsfac8w577"]
+[gd_scene load_steps=9 format=3 uid="uid://b1crsfac8w577"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_pipe/LevelPipe.gd" id="1_842cr"]
 [ext_resource type="PackedScene" uid="uid://b1oc0t30nx6jo" path="res://scenes/components/floors/FloorsBricks.tscn" id="2_hghhv"]
 [ext_resource type="PackedScene" uid="uid://0yk11tny8soe" path="res://scenes/components/lights/LightsSpotProjector.tscn" id="3_1j26s"]
 [ext_resource type="PackedScene" uid="uid://dolj6kux70jbf" path="res://scenes/components/player/Player.tscn" id="3_mfj7k"]
-[ext_resource type="PackedScene" uid="uid://ba16fscr17i8r" path="res://scenes/components/floors/FloorsBricksCorner.tscn" id="3_seodk"]
-[ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/brick_columns/brick_column/BrickColumn.tscn" id="4_hfp5v"]
+[ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/brick_columns/column_brick/ColumnBrick.tscn" id="4_hfp5v"]
 [ext_resource type="PackedScene" uid="uid://cva11xlcydc8q" path="res://scenes/components/objects/ObjectsBladePropeller.tscn" id="4_uiu8c"]
 [ext_resource type="PackedScene" uid="uid://dg2esfwvv6uqs" path="res://scenes/components/lights/LightsMetalWallLamp.tscn" id="5_4e160"]
-[ext_resource type="PackedScene" uid="uid://7wu6w2qfk3e" path="res://scenes/components/brick_columns/BrickColumns.tscn" id="5_rwa64"]
+[ext_resource type="PackedScene" uid="uid://b6av1hu6mdqwc" path="res://scenes/components/brick_columns/ColumnsBrick.tscn" id="5_rwa64"]
 
 [node name="LevelPipe" type="Node3D"]
 script = ExtResource("1_842cr")
@@ -18,98 +17,100 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="FloorsBricks_1" parent="Walls" instance=ExtResource("2_hghhv")]
+[node name="WallBricks_1" parent="Walls" instance=ExtResource("2_hghhv")]
 transform = Transform3D(-5.24537e-08, 1.2, -5.24537e-08, 0, -5.24537e-08, -1.2, -1.2, -5.24537e-08, 2.29282e-15, -10, 16.8, 0)
 
-[node name="FloorsBricks_2" parent="Walls" instance=ExtResource("2_hghhv")]
+[node name="WallBricks_2" parent="Walls" instance=ExtResource("2_hghhv")]
 transform = Transform3D(-1.2, -1.81195e-07, 7.92028e-15, 0, -5.24537e-08, -1.2, 1.81195e-07, -1.2, 5.24537e-08, 4, 11, 10)
 
-[node name="FloorsBricks_3" parent="Walls" instance=ExtResource("2_hghhv")]
+[node name="WallBricks_3" parent="Walls" instance=ExtResource("2_hghhv")]
 transform = Transform3D(-5.24537e-08, -1.2, 5.24537e-08, 0, -5.24537e-08, -1.2, 1.2, -5.24537e-08, 2.29282e-15, 14, 16.8, -4)
 
-[node name="FloorsBricks_4" parent="Walls" instance=ExtResource("2_hghhv")]
+[node name="WallBricks_5" parent="Walls/WallBricks_3" instance=ExtResource("2_hghhv")]
+transform = Transform3D(1, 1.06581e-14, -2.11758e-22, -1.06581e-14, 1, 1.06581e-14, 0, -1.06581e-14, 1, 24.0295, -9.53674e-07, 0)
+
+[node name="WallBricks_4" parent="Walls" instance=ExtResource("2_hghhv")]
 transform = Transform3D(1.2, 0, 0, 0, -5.24537e-08, -1.2, 0, 1.2, -5.24537e-08, 0, 16.8, -14)
 
-[node name="FloorsBricksCorner" type="Node3D" parent="Walls"]
+[node name="WallsBricksCorner" type="Node3D" parent="Walls"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="FloorsBricks_corner_1" parent="Walls/FloorsBricksCorner" instance=ExtResource("2_hghhv")]
-transform = Transform3D(-0.707107, 0.707107, -4.37114e-08, 3.09086e-08, -3.09086e-08, -1, -0.707107, -0.707107, 1.91069e-15, -5.1732, 13, 7.75899)
+[node name="WallBricks_corner_1" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
+transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, -5, 13, 8)
 
-[node name="FloorsBricksCorner" parent="Walls/FloorsBricksCorner/FloorsBricks_corner_1" instance=ExtResource("3_seodk")]
-transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37115e-08, -1, -4.37114e-08, 3.82164, -1.95046, -10.0246)
-metadata/_edit_lock_ = true
+[node name="WallBricks_corner" parent="Walls/WallsBricksCorner/WallBricks_corner_1" instance=ExtResource("2_hghhv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -1.3145e-13, 1, -6, 0, -24)
 
-[node name="FloorsBricks_corner_2" parent="Walls/FloorsBricksCorner" instance=ExtResource("2_hghhv")]
+[node name="WallBricks_corner_2" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
 transform = Transform3D(0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, 0.707107, -3.09086e-08, 9, 13, -12)
 
-[node name="FloorsBricksCorner" parent="Walls/FloorsBricksCorner/FloorsBricks_corner_2" instance=ExtResource("3_seodk")]
-transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37115e-08, -1, -4.37114e-08, 3.82164, -1.95046, -10.0246)
-metadata/_edit_lock_ = true
+[node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallBricks_corner_2" instance=ExtResource("2_hghhv")]
+transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, -10, -10)
 
-[node name="FloorsBricks_corner_3" parent="Walls/FloorsBricksCorner" instance=ExtResource("2_hghhv")]
+[node name="WallBricks_corner_3" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
 transform = Transform3D(-0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, -0.707107, 3.09086e-08, 11.8787, 13, 4.46447)
 
-[node name="FloorsBricksCorner" parent="Walls/FloorsBricksCorner/FloorsBricks_corner_3" instance=ExtResource("3_seodk")]
-transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37115e-08, -1, -4.37114e-08, 4.41653, -1.96011, -10.0074)
-metadata/_edit_lock_ = true
+[node name="FloorsBricks_1" parent="Walls/WallsBricksCorner/WallBricks_corner_3" instance=ExtResource("2_hghhv")]
+transform = Transform3D(-1, -4.79616e-14, 0, 0, 4.08562e-14, -1, -3.55271e-15, -1, 2.84217e-14, 0, -10, -9.999)
 
-[node name="FloorsBricks_corner_4" parent="Walls/FloorsBricksCorner" instance=ExtResource("2_hghhv")]
+[node name="FloorsBricks_2" parent="Walls/WallsBricksCorner/WallBricks_corner_3" instance=ExtResource("2_hghhv")]
+transform = Transform3D(-0.707107, -7.462e-08, 0.707107, -0.707107, -3.09086e-08, -0.707107, 7.462e-08, -1, -3.09086e-08, 18, -4, -10)
+
+[node name="WallBricks_corner_4" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
 transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -7.87868, 13, -9.29289)
 
-[node name="FloorsBricksCorner" parent="Walls/FloorsBricksCorner/FloorsBricks_corner_4" instance=ExtResource("3_seodk")]
-transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37115e-08, -1, -4.37114e-08, 3.82164, -1.95046, -10.0246)
-metadata/_edit_lock_ = true
+[node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallBricks_corner_4" instance=ExtResource("2_hghhv")]
+transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, -10, -10)
 
 [node name="Floors" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="FloorsBricks_1" parent="Floors" instance=ExtResource("2_hghhv")]
+[node name="FloorsBricks_floor" parent="Floors" instance=ExtResource("2_hghhv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
-[node name="FloorsBricks_2" parent="Floors" instance=ExtResource("2_hghhv")]
+[node name="FloorsBricks_roof_1" parent="Floors" instance=ExtResource("2_hghhv")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 28.8, 0)
 
-[node name="FloorsBricks_3" parent="Floors" instance=ExtResource("2_hghhv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 23.05, 20)
+[node name="FloorsBricks_roof_2" parent="Floors" instance=ExtResource("2_hghhv")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 28.8, 24)
 
-[node name="Columns" type="Node3D" parent="."]
+[node name="ColumnsBrick" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="BrickColumns_1" parent="Columns" instance=ExtResource("5_rwa64")]
+[node name="ColumnsBrick_1" parent="ColumnsBrick" instance=ExtResource("5_rwa64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0, 2.506)
 
-[node name="BrickColumns_2" parent="Columns" instance=ExtResource("5_rwa64")]
+[node name="ColumnsBrick_2" parent="ColumnsBrick" instance=ExtResource("5_rwa64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, -3.98761)
 
-[node name="BrickColumns_3" parent="Columns" instance=ExtResource("5_rwa64")]
+[node name="ColumnsBrick_3" parent="ColumnsBrick" instance=ExtResource("5_rwa64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, 3.01239)
 
-[node name="BrickColumns_4" parent="Columns" instance=ExtResource("5_rwa64")]
+[node name="ColumnsBrick_4" parent="ColumnsBrick" instance=ExtResource("5_rwa64")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86537, 0, -3.98761)
 
-[node name="BrickColumn_1" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_1" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.4, -2.38419e-07, -5.8)
 
-[node name="BrickColumn_2" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_2" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.96046e-08, -2.38419e-07, -2.2)
 
-[node name="BrickColumn_3" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_3" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.6, -2.38419e-07, 0.2)
 
-[node name="BrickColumn_4" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_4" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.8, -2.38419e-07, 1)
 
-[node name="BrickColumn_5" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_5" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4, -2.38419e-07, 4.6)
 
-[node name="BrickColumn_6" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_6" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -2.38419e-07, -1.8)
 
-[node name="BrickColumn_7" parent="Columns" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick_7" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.53928, 7.15255e-07, -7.59271)
 
 [node name="Lights" type="Node3D" parent="."]
@@ -152,7 +153,7 @@ metadata/_edit_group_ = true
 [node name="ObjectsBladePropeller" parent="Objects" instance=ExtResource("4_uiu8c")]
 transform = Transform3D(-212.132, -3.63798e-12, -212.132, 3.2031e-05, -300, -3.2031e-05, -212.132, -4.52987e-05, 212.132, 1.6919, 28.3375, -1.92625)
 
-[node name="BrickColumn" parent="Objects/ObjectsBladePropeller" instance=ExtResource("4_hfp5v")]
+[node name="ColumnBrick" parent="Objects/ObjectsBladePropeller" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(-0.00188562, 1.66533e-16, 0.00188562, 0, 0.00266667, -5.55112e-16, -0.00188562, -1.94289e-16, -0.00188562, 0.000129974, -0.0136895, 4.61172e-05)
 
 [node name="Player" parent="." instance=ExtResource("3_mfj7k")]

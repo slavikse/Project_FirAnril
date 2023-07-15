@@ -1,4 +1,4 @@
-extends Node3D
+extends Node
 
 #const PLAYER_COLLISON_MASK := 0x00000001
 #const WALL_COLLISON_MASK := 0x00000004

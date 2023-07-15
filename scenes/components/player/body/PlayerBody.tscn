@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/components/player/body/PlayerBody.gd" id="1_olap0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cp2j8"]
-radius = 1.00528
+radius = 0.900448
 height = 2.12174
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7erwl"]
@@ -23,3 +23,4 @@ mesh = SubResource("CapsuleMesh_7erwl")
 metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

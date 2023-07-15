@@ -1,163 +1,160 @@
-[gd_scene load_steps=4 format=3 uid="uid://b1oc0t30nx6jo"]
+[gd_scene load_steps=3 format=3 uid="uid://b1oc0t30nx6jo"]
 
-[ext_resource type="Script" path="res://scenes/components/floors/FloorsBricks.gd" id="1_fqlou"]
-[ext_resource type="PackedScene" uid="uid://1ap53exopsir" path="res://scenes/components/floors/models/brick_floor/scene.gltf" id="1_wlh5p"]
+[ext_resource type="PackedScene" uid="uid://1ap53exopsir" path="res://scenes/components/floors/models/brick/scene.gltf" id="1_wlh5p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e5678"]
 size = Vector3(24, 0.161527, 24)
 
-[node name="FloorsBricks" type="StaticBody3D"]
-collision_layer = 2
+[node name="FloorsBricks" type="StaticBody3D" groups=["Floor"]]
+collision_layer = 4
 collision_mask = 0
 input_ray_pickable = false
-script = ExtResource("1_fqlou")
 metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
 shape = SubResource("BoxShape3D_e5678")
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_1" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_1" parent="." instance=ExtResource("1_wlh5p")]
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_2" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_2" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_3" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_3" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_4" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_4" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_5" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_5" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_6" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_6" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_7" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_7" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_8" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_8" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_9" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_9" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_10" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_10" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_11" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_11" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_12" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_12" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_13" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_13" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_14" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_14" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_15" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_15" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_16" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_16" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_17" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_17" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_18" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_18" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_19" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_19" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_20" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_20" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_21" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_21" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_22" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_22" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_31" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_31" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_32" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_32" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 12)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_33" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_33" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_34" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_34" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_35" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_35" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_23" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_23" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_24" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_24" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_25" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_25" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_26" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_26" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_36" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_36" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_27" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_27" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_28" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_28" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_29" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_29" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
 metadata/_edit_lock_ = true
 
-[node name="BrickFloor_30" parent="." instance=ExtResource("1_wlh5p")]
+[node name="ModelBrick_30" parent="." instance=ExtResource("1_wlh5p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
 metadata/_edit_lock_ = true

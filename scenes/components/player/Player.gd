@@ -1,7 +1,8 @@
 extends CharacterBody3D
+class_name Player
 
-var _is_dash := false
 var _direction_script := preload('./scripts/direction.gd').new()
+var _is_dash := false
 
 @onready var _player_head_node := $PlayerHead as PlayerHead
 @onready var _player_body_node := $PlayerBody as PlayerBody
@@ -9,8 +10,9 @@ var _direction_script := preload('./scripts/direction.gd').new()
 
 func _physics_process(delta: float) -> void:
     var is_floor := is_on_floor()
-    var is_wall := is_on_wall()
+    var is_wall := is_on_wall() or _player_body_node.has_bounce_buffer(is_floor)
     var move_direction := _direction_script.get_move_direction(transform.basis)
+
     velocity = _player_body_node.movement(is_floor, is_wall, velocity, move_direction, delta)
     velocity = _player_legs_node.jumping(is_floor, is_wall, velocity, move_direction, delta)
 
