@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_e5678"]
 size = Vector3(24, 0.161527, 24)
 
-[node name="WallsBricks" type="StaticBody3D"]
+[node name="WallsBricks" type="StaticBody3D" groups=["Wall"]]
 collision_layer = 2
 collision_mask = 0
 input_ray_pickable = false

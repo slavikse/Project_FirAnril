@@ -17,7 +17,6 @@ func dash_init(move_direction: Vector3, is_floor: bool, delta: float) -> void:
         _quantity_dashes -= 1
         _dash_start(move_direction, delta)
 
-# todo сделать рывок в сторону взгляда ГГ. даже если ГГ не двигается
 func _dash_start(move_direction: Vector3, delta: float) -> void:
     _dash_timeout_node.start()
     _acceleration = move_direction * _ACCELERATION * delta

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1crsfac8w577"]
+[gd_scene load_steps=10 format=3 uid="uid://b1crsfac8w577"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_pipe/LevelPipe.gd" id="1_842cr"]
 [ext_resource type="PackedScene" uid="uid://b1oc0t30nx6jo" path="res://scenes/components/floors/FloorsBricks.tscn" id="2_hghhv"]
 [ext_resource type="PackedScene" uid="uid://0yk11tny8soe" path="res://scenes/components/lights/LightsSpotProjector.tscn" id="3_1j26s"]
+[ext_resource type="PackedScene" uid="uid://cdjc6e4dbhcwl" path="res://scenes/components/walls/WallsBricks.tscn" id="3_2xt5m"]
 [ext_resource type="PackedScene" uid="uid://dolj6kux70jbf" path="res://scenes/components/player/Player.tscn" id="3_mfj7k"]
 [ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/brick_columns/column_brick/ColumnBrick.tscn" id="4_hfp5v"]
 [ext_resource type="PackedScene" uid="uid://cva11xlcydc8q" path="res://scenes/components/objects/ObjectsBladePropeller.tscn" id="4_uiu8c"]
@@ -17,51 +18,48 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="WallBricks_1" parent="Walls" instance=ExtResource("2_hghhv")]
+[node name="WallsBricks_1" parent="Walls" instance=ExtResource("3_2xt5m")]
 transform = Transform3D(-5.24537e-08, 1.2, -5.24537e-08, 0, -5.24537e-08, -1.2, -1.2, -5.24537e-08, 2.29282e-15, -10, 16.8, 0)
 
-[node name="WallBricks_2" parent="Walls" instance=ExtResource("2_hghhv")]
-transform = Transform3D(-1.2, -1.81195e-07, 7.92028e-15, 0, -5.24537e-08, -1.2, 1.81195e-07, -1.2, 5.24537e-08, 4, 11, 10)
+[node name="WallsBricks_2" parent="Walls" instance=ExtResource("3_2xt5m")]
+transform = Transform3D(-1.2, 1.04907e-07, -4.58565e-15, 0, -5.24537e-08, -1.2, -1.04907e-07, -1.2, 5.24537e-08, 4, 11, 10)
 
 [node name="WallBricks_3" parent="Walls" instance=ExtResource("2_hghhv")]
 transform = Transform3D(-5.24537e-08, -1.2, 5.24537e-08, 0, -5.24537e-08, -1.2, 1.2, -5.24537e-08, 2.29282e-15, 14, 16.8, -4)
 
-[node name="WallBricks_5" parent="Walls/WallBricks_3" instance=ExtResource("2_hghhv")]
-transform = Transform3D(1, 1.06581e-14, -2.11758e-22, -1.06581e-14, 1, 1.06581e-14, 0, -1.06581e-14, 1, 24.0295, -9.53674e-07, 0)
+[node name="WallsBricks_5" parent="Walls/WallBricks_3" instance=ExtResource("3_2xt5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
 
-[node name="WallBricks_4" parent="Walls" instance=ExtResource("2_hghhv")]
+[node name="WallsBricks_4" parent="Walls" instance=ExtResource("3_2xt5m")]
 transform = Transform3D(1.2, 0, 0, 0, -5.24537e-08, -1.2, 0, 1.2, -5.24537e-08, 0, 16.8, -14)
 
 [node name="WallsBricksCorner" type="Node3D" parent="Walls"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="WallBricks_corner_1" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
+[node name="WallsBricks_corner_1" parent="Walls/WallsBricksCorner" instance=ExtResource("3_2xt5m")]
 transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, -5, 13, 8)
 
-[node name="WallBricks_corner" parent="Walls/WallsBricksCorner/WallBricks_corner_1" instance=ExtResource("2_hghhv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -1.3145e-13, 1, -6, 0, -24)
+[node name="WallsBricks_corner" parent="Walls/WallsBricksCorner/WallsBricks_corner_1" instance=ExtResource("3_2xt5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -3.55271e-15, 1, -6, 9.53674e-07, -24)
 
-[node name="WallBricks_corner_2" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
+[node name="WallsBricks_corner_2" parent="Walls/WallsBricksCorner" instance=ExtResource("3_2xt5m")]
 transform = Transform3D(0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, 0.707107, -3.09086e-08, 9, 13, -12)
 
-[node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallBricks_corner_2" instance=ExtResource("2_hghhv")]
-transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, -10, -10)
+[node name="WallsBricks_corner_3" parent="Walls/WallsBricksCorner" instance=ExtResource("3_2xt5m")]
+transform = Transform3D(-0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, -0.707107, 3.09086e-08, 12, 13, 4.5)
 
-[node name="WallBricks_corner_3" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
-transform = Transform3D(-0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, -0.707107, 3.09086e-08, 11.8787, 13, 4.46447)
+[node name="FloorsBricks_1" parent="Walls/WallsBricksCorner/WallsBricks_corner_3" instance=ExtResource("2_hghhv")]
+transform = Transform3D(-1, -4.79616e-14, 0, 0, 1.24345e-14, -1, -3.55271e-15, -1, 3.19744e-14, 0.060648, -9.88911, -9.999)
 
-[node name="FloorsBricks_1" parent="Walls/WallsBricksCorner/WallBricks_corner_3" instance=ExtResource("2_hghhv")]
-transform = Transform3D(-1, -4.79616e-14, 0, 0, 4.08562e-14, -1, -3.55271e-15, -1, 2.84217e-14, 0, -10, -9.999)
+[node name="FloorsBricks_2" parent="Walls/WallsBricksCorner/WallsBricks_corner_3" instance=ExtResource("2_hghhv")]
+transform = Transform3D(-0.707107, -7.462e-08, 0.707107, -0.707107, -3.09086e-08, -0.707107, 7.462e-08, -1, -3.09086e-08, 18.0607, -3.88911, -10)
 
-[node name="FloorsBricks_2" parent="Walls/WallsBricksCorner/WallBricks_corner_3" instance=ExtResource("2_hghhv")]
-transform = Transform3D(-0.707107, -7.462e-08, 0.707107, -0.707107, -3.09086e-08, -0.707107, 7.462e-08, -1, -3.09086e-08, 18, -4, -10)
+[node name="WallsBricks_corner_4" parent="Walls/WallsBricksCorner" instance=ExtResource("3_2xt5m")]
+transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -8, 13, -9)
 
-[node name="WallBricks_corner_4" parent="Walls/WallsBricksCorner" instance=ExtResource("2_hghhv")]
-transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -7.87868, 13, -9.29289)
-
-[node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallBricks_corner_4" instance=ExtResource("2_hghhv")]
-transform = Transform3D(0, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, -10, -10)
+[node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallsBricks_corner_4" instance=ExtResource("2_hghhv")]
+transform = Transform3D(-1, -8.74228e-08, 0, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 28, 14, -10)
 
 [node name="Floors" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
