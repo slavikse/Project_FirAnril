@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1crsfac8w577"]
+[gd_scene load_steps=12 format=3 uid="uid://b1crsfac8w577"]
 
 [ext_resource type="Script" path="res://scenes/levels/level_pipe/LevelPipe.gd" id="1_842cr"]
 [ext_resource type="PackedScene" uid="uid://b1oc0t30nx6jo" path="res://scenes/components/floors/FloorsBricks.tscn" id="2_hghhv"]
@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cdjc6e4dbhcwl" path="res://scenes/components/walls/WallsBricks.tscn" id="3_2xt5m"]
 [ext_resource type="PackedScene" uid="uid://dolj6kux70jbf" path="res://scenes/components/player/Player.tscn" id="3_mfj7k"]
 [ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/brick_columns/column_brick/ColumnBrick.tscn" id="4_hfp5v"]
-[ext_resource type="PackedScene" uid="uid://cva11xlcydc8q" path="res://scenes/components/objects/ObjectsBladePropeller.tscn" id="4_uiu8c"]
+[ext_resource type="PackedScene" uid="uid://cva11xlcydc8q" path="res://scenes/components/objects/BladePropeller.tscn" id="4_uiu8c"]
 [ext_resource type="PackedScene" uid="uid://dg2esfwvv6uqs" path="res://scenes/components/lights/LightsMetalWallLamp.tscn" id="5_4e160"]
 [ext_resource type="PackedScene" uid="uid://b6av1hu6mdqwc" path="res://scenes/components/brick_columns/ColumnsBrick.tscn" id="5_rwa64"]
+[ext_resource type="PackedScene" uid="uid://rduu177fqnsc" path="res://scenes/components/objects/Cannon.tscn" id="9_lexrx"]
+[ext_resource type="PackedScene" uid="uid://bd6jqhg5jtskw" path="res://scenes/components/objects/DemonicBall.tscn" id="10_ihqe8"]
 
 [node name="LevelPipe" type="Node3D"]
 script = ExtResource("1_842cr")
@@ -88,13 +90,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, -3.98761)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, 3.01239)
 
 [node name="ColumnsBrick_4" parent="ColumnsBrick" instance=ExtResource("5_rwa64")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86537, 0, -3.98761)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57703, 0, -4.68947)
 
 [node name="ColumnBrick_1" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.4, -2.38419e-07, -5.8)
 
 [node name="ColumnBrick_2" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.96046e-08, -2.38419e-07, -2.2)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.804374, -2.38419e-07, -1.7592)
 
 [node name="ColumnBrick_3" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.6, -2.38419e-07, 0.2)
@@ -103,7 +105,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.6, -2.38419e-07, 0.2
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.8, -2.38419e-07, 1)
 
 [node name="ColumnBrick_5" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4, -2.38419e-07, 4.6)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.91728, -2.38419e-07, 5.12514)
 
 [node name="ColumnBrick_6" parent="ColumnsBrick" instance=ExtResource("4_hfp5v")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -2.38419e-07, -1.8)
@@ -126,9 +128,6 @@ directional_shadow_mode = 0
 sky_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="LightsSpotProjector_1" parent="Lights" instance=ExtResource("3_1j26s")]
-transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 1.68476, 26.8397, -1.89769)
-
 [node name="LightsMetalWallLamp_2" parent="Lights" instance=ExtResource("5_4e160")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0013, 26.5216, 7.37553)
 
@@ -148,11 +147,30 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.938,
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="ObjectsBladePropeller" parent="Objects" instance=ExtResource("4_uiu8c")]
-transform = Transform3D(-212.132, -3.63798e-12, -212.132, 3.2031e-05, -300, -3.2031e-05, -212.132, -4.52987e-05, 212.132, 1.6919, 28.3375, -1.92625)
+[node name="ColumnBrick" parent="Objects" instance=ExtResource("4_hfp5v")]
+transform = Transform3D(0.707107, 1.0677e-07, -0.707107, 1.50996e-07, -1, 0, -0.707107, -1.0677e-07, -0.707107, 1.65185, 33.4845, -1.93002)
 
-[node name="ColumnBrick" parent="Objects/ObjectsBladePropeller" instance=ExtResource("4_hfp5v")]
-transform = Transform3D(-0.00188562, 1.66533e-16, 0.00188562, 0, 0.00266667, -5.55112e-16, -0.00188562, -1.94289e-16, -0.00188562, 0.000129974, -0.0136895, 4.61172e-05)
+[node name="BladePropeller" parent="Objects" instance=ExtResource("4_uiu8c")]
+transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 1.692, 22.6948, -1.926)
+metadata/_edit_lock_ = true
+
+[node name="ColumnBrick_1" parent="Objects/BladePropeller" instance=ExtResource("4_hfp5v")]
+transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0054745, 4.61182e-05)
+
+[node name="ColumnBrick_2" parent="Objects/BladePropeller" instance=ExtResource("4_hfp5v")]
+transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0189377, 4.61182e-05)
+
+[node name="ColumnBrick_3" parent="Objects/BladePropeller" instance=ExtResource("4_hfp5v")]
+transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0323954, 4.61182e-05)
+
+[node name="LightsSpotProjector_1" parent="Objects/BladePropeller" instance=ExtResource("3_1j26s")]
+transform = Transform3D(0.00333333, 0, 0, 0, -0.00333333, 2.91409e-10, 0, -2.91409e-10, -0.00333333, -2.38013e-05, 0.000476412, 9.51998e-05)
+
+[node name="Cannon" parent="Objects" instance=ExtResource("9_lexrx")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 12.6422, 1.03881, 10.197)
+
+[node name="DemonicBall" parent="Objects/Cannon" instance=ExtResource("10_ihqe8")]
+transform = Transform3D(-0.996195, 0, 0.0871557, 0, 1, 0, -0.0871557, 0, -0.996195, -4.76837e-07, 2.45589, -7.32063)
 
 [node name="Player" parent="." instance=ExtResource("3_mfj7k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
