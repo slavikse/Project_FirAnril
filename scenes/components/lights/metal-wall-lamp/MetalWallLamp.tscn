@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://elbdl1602kxd"]
+
+[ext_resource type="Script" path="res://scenes/components/lights/metal-wall-lamp/MetalWallLamp.gd" id="1_hhhao"]
+[ext_resource type="PackedScene" uid="uid://bl1horajy5pt6" path="res://scenes/components/models/metal-wall-lamp/scene.gltf" id="2_vu4xw"]
+[ext_resource type="PackedScene" uid="uid://c52ucxsx3c1o3" path="res://scenes/components/lights/metal-wall-lamp/glow/MetalWallLampGlow.tscn" id="3_a7cyi"]
+
+[node name="MetalWallLamp" type="Node3D"]
+script = ExtResource("1_hhhao")
+metadata/_edit_group_ = true
+
+[node name="MetalWallLamp" parent="." instance=ExtResource("2_vu4xw")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.28, 0, 1.8)
+metadata/_edit_lock_ = true
+
+[node name="MetalWallLampGlow" parent="." instance=ExtResource("3_a7cyi")]
