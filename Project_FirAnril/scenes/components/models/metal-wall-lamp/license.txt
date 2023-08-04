@@ -1,0 +1,11 @@
+Model Information:
+* title:	Metal Wall Lamp
+* source:	https://sketchfab.com/3d-models/metal-wall-lamp-384b79f0be904b9fb97905d65dc8ccfd
+* author:	annakhobta (https://sketchfab.com/annakhobta)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Metal Wall Lamp" (https://sketchfab.com/3d-models/metal-wall-lamp-384b79f0be904b9fb97905d65dc8ccfd) by annakhobta (https://sketchfab.com/annakhobta) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

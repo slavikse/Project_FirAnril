@@ -1,0 +1,160 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdjc6e4dbhcwl"]
+
+[ext_resource type="PackedScene" uid="uid://1ap53exopsir" path="res://scenes/components/models/brick/scene.gltf" id="2_ckini"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5678"]
+size = Vector3(24, 0.161527, 24)
+
+[node name="WallsBricks" type="StaticBody3D" groups=["Wall"]]
+collision_layer = 2
+collision_mask = 0
+input_ray_pickable = false
+metadata/_edit_group_ = true
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+shape = SubResource("BoxShape3D_e5678")
+metadata/_edit_lock_ = true
+
+[node name="Brick_1" parent="." instance=ExtResource("2_ckini")]
+metadata/_edit_lock_ = true
+
+[node name="Brick_2" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Brick_3" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_4" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_5" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_6" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Brick_7" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_8" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_9" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_10" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_11" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_12" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_13" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_14" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_15" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_16" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Brick_17" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_18" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_19" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_20" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_21" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_22" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_31" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
+metadata/_edit_lock_ = true
+
+[node name="Brick_32" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 12)
+metadata/_edit_lock_ = true
+
+[node name="Brick_33" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+metadata/_edit_lock_ = true
+
+[node name="Brick_34" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
+metadata/_edit_lock_ = true
+
+[node name="Brick_35" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
+metadata/_edit_lock_ = true
+
+[node name="Brick_23" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_24" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Brick_25" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_26" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
+metadata/_edit_lock_ = true
+
+[node name="Brick_36" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
+metadata/_edit_lock_ = true
+
+[node name="Brick_27" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_28" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="Brick_29" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
+metadata/_edit_lock_ = true
+
+[node name="Brick_30" parent="." instance=ExtResource("2_ckini")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -8)
+metadata/_edit_lock_ = true
