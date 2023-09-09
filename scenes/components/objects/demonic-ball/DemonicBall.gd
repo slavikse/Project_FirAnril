@@ -1,45 +1,39 @@
-extends RigidBody3D
+extends Node3D
 
-const _DELAY_SHOT := [1, 2]
-const _POWER := Vector3(10000, 10000, 10000)
+const _DELAY_SHOT := [2, 3]
 
 var _init_position := Vector3.ZERO
-var _init_rotation := Vector3.ZERO
 
-@onready var _shot_node := $Shot as Timer
-@onready var _shot2_node := $Shot_2 as Timer
+@onready var _shot_node := $Shot as AnimationPlayer
+@onready var _ball_delay_node := $Ball/Delay as Timer
 
 func _ready() -> void:
+    _init_state()
+    _start_delay()
+
+func _init_state() -> void:
     _init_position = global_position
-    _init_rotation = global_rotation
-    _delay_shot()
 
-func _delay_shot() -> void:
-    _shot_node.wait_time = GNumber.get_random_range_int(_DELAY_SHOT[0], _DELAY_SHOT[1])
-    _shot_node.start()
+# todo снаряд выдвигается из пушки (перезарядка)
+#   анимация появления за _DELAY_SHOT
+func _start_delay() -> void:
+    _ball_delay_node.wait_time = GNumber.get_random_range_int(_DELAY_SHOT[0], _DELAY_SHOT[1])
+    _ball_delay_node.start()
 
-func _on_shot_timeout() -> void:
+func _on_shot_delay_timeout() -> void:
     _gunshot()
 
-# todo изменить угол вылета снаряда
-# todo звук выстрела
-# todo у снаряда звук удара об стены и разрушение.
 func _gunshot() -> void:
-    freeze = false
-    apply_impulse(transform.basis * _POWER)
+    # todo звук выстрела + эффект выстрела
+    _shot_node.play('shot')
 
-    # todo разрушать снаряд при столкновении со стеной или игроком
-    # todo снаряд должен толкнуть игрока и разрушиться
-    _shot2_node.wait_time = GNumber.get_random_range_int(3, 4)
-    _shot2_node.start()
+# todo разрушать при столкновении со стеной или с барьером
+func _on_ball_body_entered(wall_node: Node3D) -> void:
+    # todo у снаряда звук удара об стены и разрушение.
+    if wall_node.is_in_group(GConst.GROUPS.Wall):
+        _restart()
 
-# todo шар будет разрушен, создается новый и начинается таймер
-func _reinit() -> void:
-    # todo анимация появления и после анимации продолжается код
+func _restart() -> void:
+    _shot_node.stop()
     global_position = _init_position
-    global_rotation = _init_rotation
-    freeze = true
-    _delay_shot()
-
-func _on_shot_2_timeout() -> void:
-    _reinit()
+    _start_delay()

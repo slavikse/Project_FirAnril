@@ -18,7 +18,6 @@ shape = SubResource("CapsuleShape3D_cp2j8")
 metadata/_edit_lock_ = true
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
-cast_shadow = 0
 mesh = SubResource("CapsuleMesh_7erwl")
 metadata/_edit_lock_ = true
 

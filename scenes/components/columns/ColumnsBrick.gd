@@ -1,6 +1,6 @@
 extends Area3D
 
-const _COLUMN_HEIGHT := -19.95
+const _COLUMN_HEIGHT := -19.9
 const _COLUMN_HEIGHT_MAX := 2.0
 const _COLUMN_SPEED_UP := 3.0 # 1.0
 const _COLUMN_SPEED_DOWN := _COLUMN_SPEED_UP * 3.0

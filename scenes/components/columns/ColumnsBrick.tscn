@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6av1hu6mdqwc"]
 
-[ext_resource type="Script" path="res://scenes/components/brick-columns/ColumnsBrick.gd" id="1_f54m6"]
-[ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/brick-columns/column-brick/ColumnBrick.tscn" id="2_hes6y"]
+[ext_resource type="Script" path="res://scenes/components/columns/ColumnsBrick.gd" id="1_f54m6"]
+[ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/columns/column-brick/ColumnBrick.tscn" id="2_hes6y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i818p"]
 size = Vector3(48, 0.237899, 48)
