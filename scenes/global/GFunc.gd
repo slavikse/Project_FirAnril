@@ -1,17 +1,18 @@
 extends Node
 
-# Универсальная функция типа: при присвоении преобразовать в нужный тип.
+# Получает случайное число из переданного списка.
 func get_random_value_from_list(list: Array):
     return list[GNumber.get_random_range_int(0, len(list) - 1)]
 
-# Можно использовать если не важна точность до 0.1
-# Создаёт и запускает таймер. Нужно вызвать уничтожение таймера,
-# который передаётся в функцию func_name первым аргументом.
-#func timer_start(wait_time: float, node: Object, func_name: String) -> void:
-#    var timer_node := Timer.new()
-#    G.root_node.call_deferred('add_child', timer_node)
-#    timer_node.wait_time = wait_time
-#    timer_node.one_shot = true
-#    timer_node.autostart = true
-#    #warning-ignore:RETURN_VALUE_DISCARDED
-##    timer_node.connect('timeout', node, func_name, [timer_node])
+# Создаёт и запускает таймер с функцией колбеком (wait_time: seconds).
+func delay_call(wait_time: float, callback: Callable) -> void:
+    var timer_node := Timer.new()
+    timer_node.wait_time = wait_time
+    timer_node.one_shot = true
+    timer_node.autostart = true
+    timer_node.timeout.connect(_timer_timeout.bind(timer_node, callback))
+    G.root_node.call_deferred('add_child', timer_node)
+
+func _timer_timeout(timer_node: Timer, callback: Callable):
+    timer_node.queue_free()
+    callback.call()

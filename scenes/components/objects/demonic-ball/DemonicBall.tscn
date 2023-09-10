@@ -1,14 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd6jqhg5jtskw"]
+[gd_scene load_steps=14 format=3 uid="uid://bd6jqhg5jtskw"]
 
 [ext_resource type="Script" path="res://scenes/components/objects/demonic-ball/DemonicBall.gd" id="1_myssn"]
-[ext_resource type="PackedScene" uid="uid://ci7kfws1k26yq" path="res://scenes/components/models/demonic-ball/scene.gltf" id="2_wnf05"]
+[ext_resource type="PackedScene" uid="uid://ci7kfws1k26yq" path="res://scenes/components/models/demonic-ball/scene.gltf" id="2_4qpnu"]
+[ext_resource type="Texture2D" uid="uid://c1wgjhh4yu11a" path="res://scenes/components/models/demonic-ball/textures/Demonic_Cannon_Ball_baseColor.png" id="3_gdy4k"]
 
-[sub_resource type="Animation" id="Animation_ywvmm"]
+[sub_resource type="Animation" id="Animation_bxhh1"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Ball:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -18,68 +19,132 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_trihx"]
-resource_name = "shot"
-length = 2.0
+[sub_resource type="Animation" id="Animation_whiea"]
+resource_name = "ready_position"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Ball:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 5, 30)]
+"values": [Vector3(0, 0, -2), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ofx28"]
+[sub_resource type="Animation" id="Animation_ynkgs"]
+resource_name = "shooting"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ball:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 4, 30)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_anim_shot_destruction"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w3woe"]
 _data = {
-"RESET": SubResource("Animation_ywvmm"),
-"shot": SubResource("Animation_trihx")
+"RESET": SubResource("Animation_bxhh1"),
+"ready_position": SubResource("Animation_whiea"),
+"shooting": SubResource("Animation_ynkgs")
 }
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mih8v"]
 radius = 0.530907
+
+[sub_resource type="Curve" id="Curve_chs8v"]
+_data = [Vector2(0, 0), 0.0, 3.26534, 0, 0, Vector2(0.846821, 1), -1.13816, -1.13816, 0, 0, Vector2(1, 0), -17.7552, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_b6y51"]
+curve = SubResource("Curve_chs8v")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cf8cl"]
+lifetime_randomness = 0.2
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 0.3
+emission_ring_inner_radius = 0.2
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, -10, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 4.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+radial_accel_min = 1.0
+radial_accel_max = 1.5
+scale_min = 0.15
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_b6y51")
+color = Color(0.305882, 0.294118, 0.266667, 1)
+attractor_interaction_enabled = false
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_snkth"]
+albedo_texture = ExtResource("3_gdy4k")
+
+[sub_resource type="SphereMesh" id="SphereMesh_ffsht"]
+material = SubResource("StandardMaterial3D_snkth")
+radial_segments = 8
+rings = 8
 
 [node name="DemonicBall" type="Node3D"]
 script = ExtResource("1_myssn")
 metadata/_edit_lock_ = true
 
 [node name="Shot" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Ball")
 libraries = {
-"": SubResource("AnimationLibrary_ofx28")
+"": SubResource("AnimationLibrary_w3woe")
 }
+
+[node name="Delay" type="Timer" parent="Shot"]
+one_shot = true
 
 [node name="Ball" type="RigidBody3D" parent="."]
 collision_layer = 8
-lock_rotation = true
 freeze = true
-angular_damp = 3.0
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="Ball"]
 visible = false
 shape = SubResource("SphereShape3D_mih8v")
 metadata/_edit_lock_ = true
 
-[node name="DemonBall" parent="Ball" instance=ExtResource("2_wnf05")]
+[node name="DemonBallModel" parent="Ball" instance=ExtResource("2_4qpnu")]
 transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
 metadata/_edit_lock_ = true
 
 [node name="Glow" type="OmniLight3D" parent="Ball"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.5)
-light_color = Color(0, 0.666667, 0.878431, 1)
-light_energy = 10.0
+light_color = Color(0, 0.443137, 0.686275, 1)
+light_energy = 20.0
 light_bake_mode = 1
-omni_range = 0.7
+omni_range = 0.8
 metadata/_edit_lock_ = true
-
-[node name="Delay" type="Timer" parent="Ball"]
-one_shot = true
 
 [node name="Ball" type="Area3D" parent="Ball"]
 collision_layer = 8
@@ -90,5 +155,19 @@ visible = false
 shape = SubResource("SphereShape3D_mih8v")
 metadata/_edit_lock_ = true
 
-[connection signal="timeout" from="Ball/Delay" to="." method="_on_shot_delay_timeout"]
+[node name="Destruction" type="GPUParticles3D" parent="Ball"]
+cast_shadow = 0
+emitting = false
+amount = 60
+lifetime = 0.8
+one_shot = true
+explosiveness = 1.0
+randomness = 0.2
+visibility_aabb = AABB(-0.485859, -0.488943, -0.267034, 0.982461, 1.01011, 0.268444)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_cf8cl")
+draw_pass_1 = SubResource("SphereMesh_ffsht")
+metadata/_edit_lock_ = true
+
+[connection signal="timeout" from="Shot/Delay" to="." method="_on_shot_delay_timeout"]
 [connection signal="body_entered" from="Ball/Ball" to="." method="_on_ball_body_entered"]

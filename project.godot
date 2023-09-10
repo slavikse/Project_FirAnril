@@ -80,3 +80,8 @@ dash={
 3d_physics/layer_2="Wall"
 3d_physics/layer_3="Floor"
 3d_physics/layer_4="Barrier"
+
+[rendering]
+
+scaling_3d/mode=1
+scaling_3d/scale=0.95

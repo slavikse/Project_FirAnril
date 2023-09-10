@@ -81,10 +81,10 @@ metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="ColumnsBrick_1" parent="ColumnsBrick" instance=ExtResource("4_cv6s0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4, 0, 2.506)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.12408, 0, 1.12809)
 
 [node name="ColumnsBrick_2" parent="ColumnsBrick" instance=ExtResource("4_cv6s0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, -3.98761)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83087, 0, -3.50678)
 
 [node name="ColumnsBrick_3" parent="ColumnsBrick" instance=ExtResource("4_cv6s0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, 3.01239)
@@ -92,14 +92,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.13463, 0, 3.01239)
 [node name="ColumnsBrick_4" parent="ColumnsBrick" instance=ExtResource("4_cv6s0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.57703, 0, -4.68947)
 
+[node name="ColumnsBrick_5" parent="ColumnsBrick" instance=ExtResource("4_cv6s0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08557, 0, -9.80621)
+
 [node name="ColumnBrick_1" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.4, -2.38419e-07, -5.8)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6.45435, -2.38419e-07, -8.27658)
+
+[node name="ColumnBrick_3" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.67426, -2.38419e-07, -4.94618)
 
 [node name="ColumnBrick_2" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.804374, -2.38419e-07, -1.7592)
-
-[node name="ColumnBrick_3" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -3.6, -2.38419e-07, 0.2)
 
 [node name="ColumnBrick_4" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.8, -2.38419e-07, 1)
@@ -107,11 +110,14 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.8, -2.38419e-07, 1)
 [node name="ColumnBrick_5" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.91728, -2.38419e-07, 5.12514)
 
-[node name="ColumnBrick_6" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 6, -2.38419e-07, -1.8)
-
 [node name="ColumnBrick_7" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.53928, 7.15255e-07, -7.59271)
+
+[node name="ColumnBrick_8" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -4.87528, 7.15255e-07, 0.00280428)
+
+[node name="ColumnBrick_9" parent="ColumnsBrick" instance=ExtResource("5_1ys0y")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 9.00366, 7.15255e-07, -2.95187)
 
 [node name="Lights" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
@@ -122,7 +128,7 @@ metadata/_edit_lock_ = true
 
 [node name="Sun" type="DirectionalLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 23, 0)
-light_color = Color(0.364706, 0.364706, 0.364706, 1)
+light_color = Color(0.568627, 0.537255, 0.443137, 1)
 light_bake_mode = 1
 directional_shadow_mode = 0
 sky_mode = 1
@@ -130,6 +136,7 @@ metadata/_edit_lock_ = true
 
 [node name="MetalWallLamp_2" parent="Lights" instance=ExtResource("6_sqkvf")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0013, 26.5216, 7.37553)
+is_blink = true
 
 [node name="MetalWallLamp_3" parent="Lights" instance=ExtResource("6_sqkvf")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0013, 10.2659, -2.37065)
@@ -165,10 +172,10 @@ transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.
 transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0189377, 4.61182e-05)
 
 [node name="Cannon" parent="Objects" instance=ExtResource("9_f3lgk")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 12.6422, 0.479785, 10.197)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 13.312, 0.54, 9.528)
 
 [node name="DemonicBall" parent="Objects/Cannon" instance=ExtResource("10_b0drw")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.38419e-07, 2.456, -7.321)
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
 
 [node name="Player" parent="." instance=ExtResource("11_mmrub")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
