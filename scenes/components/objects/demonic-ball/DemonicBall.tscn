@@ -47,21 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 0.5),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 4, 30)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_anim_shot_destruction"
-}]
+"values": [Vector3(0, 0, 0), Vector3(0, 4, 25)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3woe"]
@@ -126,6 +112,9 @@ one_shot = true
 
 [node name="Ball" type="RigidBody3D" parent="."]
 collision_layer = 8
+collision_mask = 11
+collision_priority = 2.0
+lock_rotation = true
 freeze = true
 metadata/_edit_group_ = true
 

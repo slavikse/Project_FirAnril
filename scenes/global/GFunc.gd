@@ -10,9 +10,7 @@ func delay_call(wait_time: float, callback: Callable) -> void:
     timer_node.wait_time = wait_time
     timer_node.one_shot = true
     timer_node.autostart = true
-    timer_node.timeout.connect(_timer_timeout.bind(timer_node, callback))
     G.root_node.call_deferred('add_child', timer_node)
-
-func _timer_timeout(timer_node: Timer, callback: Callable):
+    await timer_node.timeout
     timer_node.queue_free()
     callback.call()
