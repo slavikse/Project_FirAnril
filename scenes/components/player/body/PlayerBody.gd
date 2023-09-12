@@ -5,7 +5,6 @@ var _gravitation_script := preload('./scripts/gravitation.gd').new()
 var _movement_script := preload('./scripts/movement.gd').new()
 var _is_bounce_buffer := false
 
-# todo скелетон + анимации
 # todo звук скольжения по стене (царапает?)
 
 func movement(is_floor: bool, is_wall: bool, velocity: Vector3, move_direction: Vector3, delta: float) -> Vector3:

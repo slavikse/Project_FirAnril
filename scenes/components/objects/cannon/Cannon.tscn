@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://rduu177fqnsc"]
 
-[ext_resource type="PackedScene" uid="uid://c62wxgpcygifo" path="res://scenes/components/models/cannon/scene.gltf" id="1_7i46o"]
+[ext_resource type="PackedScene" uid="uid://c62wxgpcygifo" path="res://assets/models/cannon/scene.gltf" id="1_7i46o"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fmhs8"]
 radius = 1.05586

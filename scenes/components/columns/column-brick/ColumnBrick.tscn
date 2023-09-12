@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2173so402ot"]
 
-[ext_resource type="PackedScene" uid="uid://dwkdsebj02lvc" path="res://scenes/components/models/column-brick/scene.gltf" id="1_7bgtw"]
+[ext_resource type="PackedScene" uid="uid://dwkdsebj02lvc" path="res://assets/models/column-brick/scene.gltf" id="1_7bgtw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vlod1"]
 size = Vector3(3, 5.01525, 3)

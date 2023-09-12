@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://0yk11tny8soe"]
 
-[ext_resource type="PackedScene" uid="uid://dl4bi1i1e20oh" path="res://scenes/components/models/spot-projector/scene.gltf" id="1_bma3o"]
+[ext_resource type="PackedScene" uid="uid://dl4bi1i1e20oh" path="res://assets/models/spot-projector/scene.gltf" id="1_bma3o"]
 
 [node name="SpotProjector" type="Node3D"]
 metadata/_edit_group_ = true

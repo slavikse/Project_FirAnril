@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cva11xlcydc8q"]
 
-[ext_resource type="PackedScene" uid="uid://big73nl2dlm08" path="res://scenes/components/models/3-blade-propeller/scene.gltf" id="2_kjqgn"]
+[ext_resource type="PackedScene" uid="uid://big73nl2dlm08" path="res://assets/models/3-blade-propeller/scene.gltf" id="2_kjqgn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_666ci"]
 size = Vector3(0.075, 0.005, 0.006)

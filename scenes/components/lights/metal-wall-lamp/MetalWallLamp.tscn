@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://elbdl1602kxd"]
 
 [ext_resource type="Script" path="res://scenes/components/lights/metal-wall-lamp/MetalWallLamp.gd" id="1_hhhao"]
-[ext_resource type="PackedScene" uid="uid://bl1horajy5pt6" path="res://scenes/components/models/metal-wall-lamp/scene.gltf" id="2_vu4xw"]
+[ext_resource type="PackedScene" uid="uid://bl1horajy5pt6" path="res://assets/models/metal-wall-lamp/scene.gltf" id="2_vu4xw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h5vfc"]
 radius = 0.436204

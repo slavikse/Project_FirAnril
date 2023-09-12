@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bd6jqhg5jtskw"]
+[gd_scene load_steps=17 format=3 uid="uid://bd6jqhg5jtskw"]
 
 [ext_resource type="Script" path="res://scenes/components/objects/demonic-ball/DemonicBall.gd" id="1_myssn"]
-[ext_resource type="PackedScene" uid="uid://ci7kfws1k26yq" path="res://scenes/components/models/demonic-ball/scene.gltf" id="2_4qpnu"]
-[ext_resource type="Texture2D" uid="uid://c1wgjhh4yu11a" path="res://scenes/components/models/demonic-ball/textures/Demonic_Cannon_Ball_baseColor.png" id="3_gdy4k"]
+[ext_resource type="PackedScene" uid="uid://ci7kfws1k26yq" path="res://assets/models/demonic-ball/scene.gltf" id="2_4qpnu"]
+[ext_resource type="Texture2D" uid="uid://c1wgjhh4yu11a" path="res://assets/models/demonic-ball/textures/Demonic_Cannon_Ball_baseColor.png" id="3_gdy4k"]
 
 [sub_resource type="Animation" id="Animation_bxhh1"]
 length = 0.001
@@ -47,7 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 0.5),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 4, 25)]
+"values": [Vector3(0, 0, 0), Vector3(0, 2, 25)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3woe"]
@@ -57,11 +57,20 @@ _data = {
 "shooting": SubResource("Animation_ynkgs")
 }
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qp5jv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6il8b"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_l4ofw"]
+material = SubResource("StandardMaterial3D_6il8b")
+radial_segments = 8
+rings = 4
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_mih8v"]
 radius = 0.530907
 
 [sub_resource type="Curve" id="Curve_chs8v"]
-_data = [Vector2(0, 0), 0.0, 3.26534, 0, 0, Vector2(0.846821, 1), -1.13816, -1.13816, 0, 0, Vector2(1, 0), -17.7552, 0.0, 0, 0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.76178, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -10.0527, 0.0, 0, 0]
 point_count = 3
 
 [sub_resource type="CurveTexture" id="CurveTexture_b6y51"]
@@ -72,26 +81,27 @@ lifetime_randomness = 0.2
 emission_shape = 6
 emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 1.0
-emission_ring_radius = 0.3
-emission_ring_inner_radius = 0.2
+emission_ring_radius = 0.4
+emission_ring_inner_radius = 0.3
 particle_flag_disable_z = true
 direction = Vector3(0, 0, 0)
 spread = 180.0
-gravity = Vector3(0, -10, 0)
-initial_velocity_min = 2.0
-initial_velocity_max = 4.0
+gravity = Vector3(0, -15, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 5.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
-radial_accel_min = 1.0
-radial_accel_max = 1.5
-scale_min = 0.15
-scale_max = 0.3
+radial_accel_min = 1.5
+radial_accel_max = 2.0
+scale_min = 0.2
+scale_max = 0.4
 scale_curve = SubResource("CurveTexture_b6y51")
-color = Color(0.305882, 0.294118, 0.266667, 1)
+color = Color(0.121569, 0.113725, 0.101961, 1)
 attractor_interaction_enabled = false
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_snkth"]
 albedo_texture = ExtResource("3_gdy4k")
+emission = Color(0.686275, 0, 0, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_ffsht"]
 material = SubResource("StandardMaterial3D_snkth")
@@ -110,6 +120,23 @@ libraries = {
 [node name="Delay" type="Timer" parent="Shot"]
 one_shot = true
 
+[node name="DelayCall" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="DelayRestart" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.04661)
+visible = false
+cast_shadow = 0
+emitting = false
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_qp5jv")
+draw_pass_1 = SubResource("SphereMesh_l4ofw")
+
 [node name="Ball" type="RigidBody3D" parent="."]
 collision_layer = 8
 collision_mask = 11
@@ -123,7 +150,10 @@ visible = false
 shape = SubResource("SphereShape3D_mih8v")
 metadata/_edit_lock_ = true
 
-[node name="DemonBallModel" parent="Ball" instance=ExtResource("2_4qpnu")]
+[node name="Model" type="Node3D" parent="Ball"]
+metadata/_edit_lock_ = true
+
+[node name="DemonBallModel" parent="Ball/Model" instance=ExtResource("2_4qpnu")]
 transform = Transform3D(0.035, 0, 0, 0, 0.035, 0, 0, 0, 0.035, 0, 0, 0)
 metadata/_edit_lock_ = true
 
@@ -158,5 +188,14 @@ process_material = SubResource("ParticleProcessMaterial_cf8cl")
 draw_pass_1 = SubResource("SphereMesh_ffsht")
 metadata/_edit_lock_ = true
 
+[node name="FlightPath" type="RayCast3D" parent="."]
+editor_description = "Target Position = цель полёта указанная в анимации shooting."
+target_position = Vector3(0, 2, 25)
+collide_with_bodies = false
+debug_shape_custom_color = Color(0.243137, 0.576471, 0.721569, 1)
+metadata/_edit_lock_ = true
+
 [connection signal="timeout" from="Shot/Delay" to="." method="_on_shot_delay_timeout"]
+[connection signal="timeout" from="DelayCall" to="." method="_on_delay_call_timeout"]
+[connection signal="timeout" from="DelayRestart" to="." method="_on_delay_restart_timeout"]
 [connection signal="body_entered" from="Ball/Ball" to="." method="_on_ball_body_entered"]

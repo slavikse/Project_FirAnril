@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b1crsfac8w577"]
+[gd_scene load_steps=14 format=3 uid="uid://b1crsfac8w577"]
 
 [ext_resource type="Script" path="res://scenes/levels/level-pipe/LevelPipe.gd" id="1_np3rm"]
 [ext_resource type="PackedScene" uid="uid://cdjc6e4dbhcwl" path="res://scenes/components/walls/WallsBricks.tscn" id="2_lhngp"]
@@ -7,10 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://d2173so402ot" path="res://scenes/components/columns/column-brick/ColumnBrick.tscn" id="5_1ys0y"]
 [ext_resource type="PackedScene" uid="uid://elbdl1602kxd" path="res://scenes/components/lights/metal-wall-lamp/MetalWallLamp.tscn" id="6_sqkvf"]
 [ext_resource type="PackedScene" uid="uid://cva11xlcydc8q" path="res://scenes/components/objects/blade-propeller/BladePropeller.tscn" id="7_cwwtf"]
+[ext_resource type="PackedScene" uid="uid://crtke2qwbquvf" path="res://scenes/components/objects/tunnel/Tunnel.tscn" id="8_ie1qp"]
 [ext_resource type="PackedScene" uid="uid://0yk11tny8soe" path="res://scenes/components/lights/SpotProjector.tscn" id="8_xt4me"]
 [ext_resource type="PackedScene" uid="uid://rduu177fqnsc" path="res://scenes/components/objects/cannon/Cannon.tscn" id="9_f3lgk"]
 [ext_resource type="PackedScene" uid="uid://bd6jqhg5jtskw" path="res://scenes/components/objects/demonic-ball/DemonicBall.tscn" id="10_b0drw"]
 [ext_resource type="PackedScene" uid="uid://dolj6kux70jbf" path="res://scenes/components/player/Player.tscn" id="11_mmrub"]
+[ext_resource type="PackedScene" uid="uid://bafe3fokcckuv" path="res://scenes/components/objects/tunnel-section/TunnelSection.tscn" id="12_15jxt"]
 
 [node name="LevelPipe" type="Node3D"]
 script = ExtResource("1_np3rm")
@@ -27,7 +29,7 @@ transform = Transform3D(-5.24537e-08, 1.2, -5.24537e-08, 0, -5.24537e-08, -1.2, 
 transform = Transform3D(-1.2, 1.04907e-07, -4.58565e-15, 0, -5.24537e-08, -1.2, -1.04907e-07, -1.2, 5.24537e-08, 4, 11, 10)
 
 [node name="WallBricks_3" parent="Walls" instance=ExtResource("3_orgoq")]
-transform = Transform3D(-5.24537e-08, -1.2, 5.24537e-08, 0, -5.24537e-08, -1.2, 1.2, -5.24537e-08, 2.29282e-15, 14, 16.8, -4)
+transform = Transform3D(-5.24537e-08, -1.2, 5.24537e-08, 0, -5.24537e-08, -1.2, 1.2, -5.24537e-08, 2.29282e-15, 14, 16.8, -18.4254)
 
 [node name="WallsBricks_5" parent="Walls/WallBricks_3" instance=ExtResource("2_lhngp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
@@ -40,13 +42,16 @@ metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="WallsBricks_corner_1" parent="Walls/WallsBricksCorner" instance=ExtResource("2_lhngp")]
-transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, -5, 13, 8)
+transform = Transform3D(-0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, -0.707107, 3.09086e-08, -7.45, 13, 5.6)
 
 [node name="WallsBricks_corner" parent="Walls/WallsBricksCorner/WallsBricks_corner_1" instance=ExtResource("2_lhngp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, -3.55271e-15, 1, -6, 9.53674e-07, -24)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 7.10543e-15, 0, -7.10543e-15, 1.5, -6, 0, -31)
 
 [node name="WallsBricks_corner_2" parent="Walls/WallsBricksCorner" instance=ExtResource("2_lhngp")]
 transform = Transform3D(0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, 0.707107, -3.09086e-08, 9, 13, -12)
+
+[node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallsBricks_corner_2" instance=ExtResource("3_orgoq")]
+transform = Transform3D(-1, -8.74228e-08, 0, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 4, -10, -10)
 
 [node name="WallsBricks_corner_3" parent="Walls/WallsBricksCorner" instance=ExtResource("2_lhngp")]
 transform = Transform3D(-0.707107, -0.707107, 3.09086e-08, 0, -4.37114e-08, -1, 0.707107, -0.707107, 3.09086e-08, 12, 13, 4.5)
@@ -61,7 +66,7 @@ transform = Transform3D(-0.707107, -7.462e-08, 0.707107, -0.707107, -3.09086e-08
 transform = Transform3D(0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -8, 13, -9)
 
 [node name="FloorsBricks" parent="Walls/WallsBricksCorner/WallsBricks_corner_4" instance=ExtResource("3_orgoq")]
-transform = Transform3D(-1, -8.74228e-08, 0, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 28, 14, -10)
+transform = Transform3D(-1, -8.74228e-08, 0, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 4, -10, -10)
 
 [node name="Floors" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
@@ -171,11 +176,50 @@ transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.
 [node name="ColumnBrick_2" parent="Objects/BladePropeller" instance=ExtResource("5_1ys0y")]
 transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0189377, 4.61182e-05)
 
-[node name="Cannon" parent="Objects" instance=ExtResource("9_f3lgk")]
-transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 13.312, 0.54, 9.528)
+[node name="Cannons" type="Node3D" parent="Objects"]
+metadata/_edit_lock_ = true
 
-[node name="DemonicBall" parent="Objects/Cannon" instance=ExtResource("10_b0drw")]
+[node name="Cannon_1" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 0.999999, 0, -0.707107, 0, 0.707107, 14.5, 2, 8.5)
+
+[node name="DemonicBall" parent="Objects/Cannons/Cannon_1" instance=ExtResource("10_b0drw")]
 transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
+
+[node name="Cannon_2" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.5, 5, -4.5)
+
+[node name="DemonicBall" parent="Objects/Cannons/Cannon_2" instance=ExtResource("10_b0drw")]
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
+
+[node name="Cannon_3" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, 14, 13, -13.5)
+
+[node name="DemonicBall" parent="Objects/Cannons/Cannon_3" instance=ExtResource("10_b0drw")]
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
+
+[node name="Cannon_4" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, 17, -18.5)
+
+[node name="DemonicBall" parent="Objects/Cannons/Cannon_4" instance=ExtResource("10_b0drw")]
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
+
+[node name="Tonnel_1" parent="Objects" instance=ExtResource("8_ie1qp")]
+transform = Transform3D(-1.49926, 0, 0.047116, 0, 1.5, 0, -0.047116, 0, -1.49926, 10.4, 22.795, 20.6)
+
+[node name="TunnelSection_1" parent="Objects/Tonnel_1" instance=ExtResource("12_15jxt")]
+transform = Transform3D(-1.13277, 0, -0.0355988, 0, 1.13333, 0, 0.0355988, 0, -1.13277, -2.08254, 2.01054, -0.557405)
+metadata/_edit_lock_ = true
+
+[node name="TunnelSection_2" parent="Objects/Tonnel_1" instance=ExtResource("12_15jxt")]
+transform = Transform3D(-1.32934, 0, -0.0417762, 0, 1.33, 0, 0.0417762, 0, -1.32934, -2.44927, 2.01054, -0.857827)
+metadata/_edit_lock_ = true
+
+[node name="Tunnel_2" parent="Objects" instance=ExtResource("8_ie1qp")]
+transform = Transform3D(-1.18645, 0.204853, 0.894625, 0.184934, 1.48553, -0.0948986, -0.898954, 0.0352362, -1.20026, -5.21864, 22.4181, -14.9983)
+metadata/_edit_lock_ = true
+
+[node name="TunnelSection" parent="Objects" instance=ExtResource("12_15jxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.78032, 2.05185, -3.58091)
 
 [node name="Player" parent="." instance=ExtResource("11_mmrub")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

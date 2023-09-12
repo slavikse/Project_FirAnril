@@ -6,6 +6,7 @@ var _jump_script := preload('./scripts/jump.gd').new()
 
 @onready var _player_legs_dash_node := $PlayerLegsDash as PlayerLegsDash
 
+# todo звук прыжка?
 func jumping(is_floor: bool, is_wall: bool, velocity: Vector3, move_direction: Vector3, delta: float) -> Vector3:
     if Input.is_action_just_pressed('jump'):
         velocity = _jump_script.jump(is_floor, is_wall, velocity, delta)
