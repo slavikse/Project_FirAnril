@@ -1,0 +1,11 @@
+Model Information:
+* title:	Tunnel
+* source:	https://sketchfab.com/3d-models/tunnel-d4af744ae72d4eaa9dd9ddf8a8addfb0
+* author:	Helsingr (https://sketchfab.com/helsingr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Tunnel" (https://sketchfab.com/3d-models/tunnel-d4af744ae72d4eaa9dd9ddf8a8addfb0) by Helsingr (https://sketchfab.com/helsingr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

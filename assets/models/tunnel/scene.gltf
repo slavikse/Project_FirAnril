@@ -1,0 +1,550 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 39223,
+      "max": [
+        31.89726448059082,
+        14.178462028503418,
+        6.514440059661865
+      ],
+      "min": [
+        -2.137807607650757,
+        -3.9984960556030273,
+        0.298007071018219
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 470676,
+      "componentType": 5126,
+      "count": 39223,
+      "max": [
+        0.9999998807907104,
+        0.9997476935386658,
+        0.9999999403953552
+      ],
+      "min": [
+        -1.0,
+        -0.9997379183769226,
+        -0.9999998807907104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 39223,
+      "max": [
+        0.9997525215148926,
+        0.9999998807907104,
+        0.9999987483024597,
+        1.0
+      ],
+      "min": [
+        -0.9997527599334717,
+        -0.9999914765357971,
+        -0.9999911189079285,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 39223,
+      "max": [
+        0.9978410005569458,
+        0.9978926777839661
+      ],
+      "min": [
+        0.00210734736174345,
+        0.00210734736174345
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 100224,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 941352,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        32.799652099609375,
+        15.043092727661133,
+        8.035036087036133
+      ],
+      "min": [
+        -2.1378085613250732,
+        -4.049585342407227,
+        0.30028754472732544
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 945312,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        0.8760913014411926,
+        0.9997423887252808,
+        0.8924242854118347
+      ],
+      "min": [
+        -0.885750949382782,
+        -0.9997334480285645,
+        -0.9999988675117493
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 627568,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        0.9409434795379639,
+        0.8919845223426819,
+        0.9237669110298157,
+        1.0
+      ],
+      "min": [
+        -0.8426510095596313,
+        -0.9999990463256836,
+        -0.9999998807907104,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 313784,
+      "componentType": 5126,
+      "count": 330,
+      "max": [
+        1.0,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 400896,
+      "componentType": 5125,
+      "count": 1512,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 949272,
+      "componentType": 5126,
+      "count": 6256,
+      "max": [
+        29.993125915527344,
+        14.995519638061523,
+        8.030405044555664
+      ],
+      "min": [
+        -2.137808084487915,
+        -1.0495847463607788,
+        4.142836093902588
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1024344,
+      "componentType": 5126,
+      "count": 6256,
+      "max": [
+        0.8961429595947266,
+        0.9999993443489075,
+        0.9999998807907104
+      ],
+      "min": [
+        -0.8986420035362244,
+        -0.9999997615814209,
+        -0.9999999403953552
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 632848,
+      "componentType": 5126,
+      "count": 6256,
+      "max": [
+        0.947977602481842,
+        0.9999975562095642,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9475158452987671,
+        -0.9999998807907104,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 316424,
+      "componentType": 5126,
+      "count": 6256,
+      "max": [
+        0.9998310804367065,
+        0.9975124597549438
+      ],
+      "min": [
+        0.0009002729784697294,
+        0.002487561898306012
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 406944,
+      "componentType": 5125,
+      "count": 31968,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Helsingr (https://sketchfab.com/helsingr)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/tunnel-d4af744ae72d4eaa9dd9ddf8a8addfb0",
+      "title": "Tunnel"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 534816,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 366472,
+      "byteOffset": 534816,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1099416,
+      "byteOffset": 901288,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 732944,
+      "byteOffset": 2000704,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 2733648,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/FloorAndMounts_baseColor.png"
+    },
+    {
+      "uri": "textures/FloorAndMounts_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/FloorAndMounts_normal.png"
+    },
+    {
+      "uri": "textures/Walls_baseColor.png"
+    },
+    {
+      "uri": "textures/Walls_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Walls_normal.png"
+    },
+    {
+      "uri": "textures/Pipes_baseColor.png"
+    },
+    {
+      "uri": "textures/Pipes_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Pipes_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "FloorAndMounts",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Walls",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Pipes",
+      "normalTexture": {
+        "index": 8
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 6
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        },
+        "roughnessFactor": 0.8065929878048781
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Tunnel.004_FloorAndMounts_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Tunnel.004_Walls_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Tunnel.004_Pipes_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "tunnel.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Tunnel.004"
+    },
+    {
+      "mesh": 0,
+      "name": "Tunnel.004_FloorAndMounts_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Tunnel.004_Walls_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Tunnel.004_Pipes_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    },
+    {
+      "sampler": 0,
+      "source": 6
+    },
+    {
+      "sampler": 0,
+      "source": 7
+    },
+    {
+      "sampler": 0,
+      "source": 8
+    }
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        30.724990844726563,
+        0.06809234619140625,
+        210.854736328125
+      ],
+      "min": [
+        -179.6897430419922,
+        -153.27688598632813,
+        -0.09575891494750977
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 9672,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9932988882064819,
+        0.947672963142395,
+        0.9950338006019592
+      ],
+      "min": [
+        -0.9989948868751526,
+        -0.9509755969047546,
+        -0.999125599861145
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9988473057746887,
+        0.9999980330467224,
+        0.9967150688171387,
+        1.0
+      ],
+      "min": [
+        -0.9992921948432922,
+        -1.0,
+        -0.9989623427391052,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9859814047813416,
+        0.9881352186203003
+      ],
+      "min": [
+        0.01394498348236084,
+        0.021500766277313232
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 3432,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 19344,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        30.724990844726563,
+        0.06809234619140625,
+        210.854736328125
+      ],
+      "min": [
+        -179.6897430419922,
+        -153.27688598632813,
+        -0.09575891494750977
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 29016,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9932988882064819,
+        0.947672963142395,
+        0.9950338006019592
+      ],
+      "min": [
+        -0.9989948868751526,
+        -0.9509755969047546,
+        -0.999125599861145
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 12896,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9988473057746887,
+        0.9999980330467224,
+        0.9967150688171387,
+        1.0
+      ],
+      "min": [
+        -0.9992921948432922,
+        -1.0,
+        -0.9989623427391052,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 6448,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9859814047813416,
+        0.9881352186203003
+      ],
+      "min": [
+        0.01394498348236084,
+        0.021500766277313232
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 13728,
+      "componentType": 5125,
+      "count": 3432,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 38688,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        30.724990844726563,
+        0.06809234619140625,
+        210.854736328125
+      ],
+      "min": [
+        -179.6897430419922,
+        -153.27688598632813,
+        -0.09575891494750977
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 48360,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9932988882064819,
+        0.947672963142395,
+        0.9950338006019592
+      ],
+      "min": [
+        -0.9989948868751526,
+        -0.9509755969047546,
+        -0.999125599861145
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 25792,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9988473057746887,
+        0.9999980330467224,
+        0.9967150688171387,
+        1.0
+      ],
+      "min": [
+        -0.9992921948432922,
+        -1.0,
+        -0.9989623427391052,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 12896,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9859814047813416,
+        0.9881352186203003
+      ],
+      "min": [
+        0.01394498348236084,
+        0.021500766277313232
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 27456,
+      "componentType": 5125,
+      "count": 3432,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 58032,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        30.724990844726563,
+        0.06809234619140625,
+        210.854736328125
+      ],
+      "min": [
+        -179.6897430419922,
+        -153.27688598632813,
+        -0.09575891494750977
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 67704,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9932988882064819,
+        0.947672963142395,
+        0.9950338006019592
+      ],
+      "min": [
+        -0.9989948868751526,
+        -0.9509755969047546,
+        -0.999125599861145
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 38688,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9988473057746887,
+        0.9999980330467224,
+        0.9967150688171387,
+        1.0
+      ],
+      "min": [
+        -0.9992921948432922,
+        -1.0,
+        -0.9989623427391052,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 19344,
+      "componentType": 5126,
+      "count": 806,
+      "max": [
+        0.9859814047813416,
+        0.9881352186203003
+      ],
+      "min": [
+        0.01394498348236084,
+        0.021500766277313232
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 41184,
+      "componentType": 5125,
+      "count": 3432,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "DudleyLong (https://sketchfab.com/DudleyLong)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/concrete-tunnel-sections-1c3ba52c66d04101b58bfb32170e62be",
+      "title": "Concrete Tunnel Sections"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 54912,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 25792,
+      "byteOffset": 54912,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 77376,
+      "byteOffset": 80704,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 51584,
+      "byteOffset": 158080,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 209664,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/ConcreteTunnel_Mat_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/ConcreteTunnel_Mat_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/ConcreteTunnel_Mat_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "ConcreteTunnel_Mat",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "ConcreteTunnel01_ConcreteTunnel_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "ConcreteTunnel02_ConcreteTunnel_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "ConcreteTunnel03_ConcreteTunnel_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TANGENT": 12,
+            "TEXCOORD_0": 13
+          },
+          "indices": 14,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "ConcreteTunnel04_ConcreteTunnel_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 16,
+            "POSITION": 15,
+            "TANGENT": 17,
+            "TEXCOORD_0": 18
+          },
+          "indices": 19,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "d2f0193a5d224d1ca509534522df90d8.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Export"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "ConcreteTunnel01"
+    },
+    {
+      "mesh": 0,
+      "name": "ConcreteTunnel01_ConcreteTunnel_Mat_0"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        7.771561172376096e-16,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        7.771561172376096e-16,
+        0.0,
+        -181.36813354492188,
+        0.0,
+        179.73483276367188,
+        1.0
+      ],
+      "name": "ConcreteTunnel02"
+    },
+    {
+      "mesh": 1,
+      "name": "ConcreteTunnel02_ConcreteTunnel_Mat_0"
+    },
+    {
+      "children": [
+        9
+      ],
+      "matrix": [
+        -1.0,
+        1.2246467991473532e-16,
+        2.3429107291650482e-15,
+        0.0,
+        1.2246467991473562e-16,
+        1.0,
+        1.2246467991473532e-16,
+        0.0,
+        -2.3429107291650482e-15,
+        1.2246467991473562e-16,
+        -1.0,
+        0.0,
+        -361.10296630859375,
+        0.0,
+        -2.401003837585449,
+        1.0
+      ],
+      "name": "ConcreteTunnel03"
+    },
+    {
+      "mesh": 2,
+      "name": "ConcreteTunnel03_ConcreteTunnel_Mat_0"
+    },
+    {
+      "children": [
+        11
+      ],
+      "matrix": [
+        4.218847493575595e-15,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        4.218847493575595e-15,
+        0.0,
+        -179.73483276367188,
+        0.0,
+        -182.13584899902344,
+        1.0
+      ],
+      "name": "ConcreteTunnel04"
+    },
+    {
+      "mesh": 3,
+      "name": "ConcreteTunnel04_ConcreteTunnel_Mat_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://crtke2qwbquvf"]
+
+[ext_resource type="PackedScene" uid="uid://cn3h0o7ggt6vq" path="res://assets/models/tunnel/scene.gltf" id="1_vssy0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e6a0e"]
+size = Vector3(2.17162, 0.001, 6.73239)
+
+[node name="Tonnel" type="StaticBody3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+collision_layer = 8
+collision_mask = 0
+
+[node name="Collision_top_1" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998805, 0, 0.0488672, 0, 1, 0, -0.0488672, 0, 0.998805, -0.163111, 3.0133, -2.30461)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_top_2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.905421, 0, 0.424516, 0, 1, 0, -0.424516, 0, 0.905421, -1.67501, 3.0133, -8.72891)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_top_3" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.564449, 0, 0.825468, 0, 1, 0, -0.825468, 0, 0.564449, -5.61774, 3.0133, -13.714)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_right_1" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0182333, 0.998639, 0.0488672, -0.999834, -0.0182551, 0, 0.00089208, -0.0488591, 0.998805, 1.12909, 1.97067, -2.29397)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_right_2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0182333, 0.933598, 0.35786, -0.999834, -0.0173448, -0.00569294, 0.00089208, -0.357904, 0.933758, -0.239681, 1.98982, -8.81034)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_right_3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0182333, 0.610977, 0.791438, -0.999833, -0.0118483, -0.0138877, 0.00089208, -0.79156, 0.611091, -4.12137, 2.05596, -14.0196)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_bottom_1" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998805, 0, 0.0488672, 0, 1, 0, -0.0488672, 0, 0.998805, -0.163111, 0.158944, -2.30461)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_bottom_2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.905421, 0, 0.424516, 0, 1, 0, -0.424516, 0, 0.905421, -1.67501, 0.158944, -8.72891)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_bottom_3" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.564449, 0, 0.825468, 0, 1, 0, -0.825468, 0, 0.564449, -5.61774, 0.158944, -13.714)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_left_1" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0182333, 0.998639, 0.0488672, -0.999834, -0.0182551, 0, 0.00089208, -0.0488591, 0.998805, -1.68836, 2.02203, -2.31875)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_left_2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0182333, 0.911069, 0.411851, -0.999834, -0.0169821, -0.00669764, 0.00089208, -0.411905, 0.911227, -3.24436, 2.04464, -8.78364)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="Collision_left_3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0182333, 0.507462, 0.861481, -0.999834, -0.010023, -0.0152574, 0.00089208, -0.861616, 0.50756, -7.5496, 2.11887, -13.581)
+shape = SubResource("BoxShape3D_e6a0e")
+metadata/_edit_lock_ = true
+
+[node name="TunnelModel" parent="." instance=ExtResource("1_vssy0")]
+transform = Transform3D(-2.18557e-10, 0, 0.005, 0, 0.005, 0, -0.005, 0, -2.18557e-10, 0, 0, 0)
+metadata/_edit_lock_ = true
