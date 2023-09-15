@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci-Fi Floor Plate
+* source:	https://sketchfab.com/3d-models/sci-fi-floor-plate-89e10b8a12b94904be0193ce194d53e1
+* author:	MartyBrosevelt (https://sketchfab.com/mjimenez855)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci-Fi Floor Plate" (https://sketchfab.com/3d-models/sci-fi-floor-plate-89e10b8a12b94904be0193ce194d53e1) by MartyBrosevelt (https://sketchfab.com/mjimenez855) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

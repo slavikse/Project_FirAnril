@@ -42,22 +42,24 @@ metadata/_edit_lock_ = true
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.28, 0, 1.8)
 metadata/_edit_lock_ = true
 
-[node name="LampGlow" type="OmniLight3D" parent="."]
+[node name="Glow" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00641613, -0.252453, 0.488596)
 light_color = Color(0.627451, 0.596078, 0.513726, 1)
 light_energy = 5.0
-light_specular = 1.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 10.0
+light_specular = 3.0
 light_bake_mode = 1
 omni_range = 5.01795
 metadata/_edit_lock_ = true
 
-[node name="Start" type="Timer" parent="LampGlow"]
+[node name="Start" type="Timer" parent="Glow"]
 one_shot = true
 
-[node name="Blink" type="AnimationPlayer" parent="LampGlow"]
+[node name="Blink" type="AnimationPlayer" parent="Glow"]
 libraries = {
 "": SubResource("AnimationLibrary_sas4q")
 }
 
-[connection signal="timeout" from="LampGlow/Start" to="." method="_on_start_timeout"]
-[connection signal="animation_finished" from="LampGlow/Blink" to="." method="_on_blink_animation_finished"]
+[connection signal="timeout" from="Glow/Start" to="." method="_on_start_timeout"]
+[connection signal="animation_finished" from="Glow/Blink" to="." method="_on_blink_animation_finished"]
