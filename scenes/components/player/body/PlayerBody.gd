@@ -22,5 +22,4 @@ func _on_body_exited(wall_node: StaticBody3D) -> void:
 func has_bounce_buffer(is_floor: bool) -> bool:
     if is_floor:
         _is_bounce_buffer = false
-
     return _is_bounce_buffer

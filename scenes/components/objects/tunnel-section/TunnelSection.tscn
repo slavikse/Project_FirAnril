@@ -8,84 +8,102 @@ size = Vector3(1.8084, 0.001, 3.25443)
 [node name="TunnelSection" type="StaticBody3D"]
 collision_layer = 8
 collision_mask = 0
+input_ray_pickable = false
+metadata/_edit_group_ = true
 
 [node name="Collision_front_left" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -4.40384, -0.317053, 1.62765)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_front_right" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.886916, -0.317053, 1.634)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_top" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75708, 1.61584, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_top_left" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.592435, 0.805618, 0, -0.805618, -0.592435, 0, 0, 0, 1, -3.20151, 0.850291, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_top_right" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0.866025, 0, -0.866025, 0.5, 0, 0, 0, 1, -0.387903, 0.780539, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_bottom" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.853, -1.86301, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_bottom_left" type="CollisionShape3D" parent="."]
 transform = Transform3D(-0.423852, -0.905732, 0, 0.905731, -0.423852, 0, 0, 0, 1, -3.30518, -0.710133, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_bottom_right" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, -0.442054, -0.792892, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_top" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82115, 2.10455, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_top_left" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.752415, -0.658689, 0, 0.658689, 0.752415, 0, 0, 0, 1, -3.40946, 1.50537, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_top_right" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.752415, 0.658689, 0, -0.658689, 0.752415, 0, 0, 0, 1, -0.238673, 1.50684, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_left" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -4.08919, 0.00644302, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_right" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.441491, 0.00531134, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_bottom" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82295, -2.09475, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_bottom_left" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.752415, 0.658689, 0, -0.658689, 0.752415, 0, 0, 0, 1, -3.4094, -1.49442, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 
 [node name="Collision_outside_bottom_right" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.751978, -0.659188, 0, 0.659188, 0.751978, 0, 0, 0, 1, -0.23833, -1.49678, 0)
+visible = false
 shape = SubResource("BoxShape3D_o2y05")
 metadata/_edit_lock_ = true
 

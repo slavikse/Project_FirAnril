@@ -1,0 +1,11 @@
+Model Information:
+* title:	Alarm button
+* source:	https://sketchfab.com/3d-models/alarm-button-a5de289cc0634078bbcc5a26e1d4aaee
+* author:	tasha.kosaykina (https://sketchfab.com/tasha.kosaykina)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Alarm button" (https://sketchfab.com/3d-models/alarm-button-a5de289cc0634078bbcc5a26e1d4aaee) by tasha.kosaykina (https://sketchfab.com/tasha.kosaykina) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

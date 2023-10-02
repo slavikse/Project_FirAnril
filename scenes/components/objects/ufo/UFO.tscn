@@ -6,6 +6,21 @@
 height = 0.575939
 radius = 0.990085
 
+[sub_resource type="Animation" id="Animation_qtebd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Glow:light_specular")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [5.0]
+}
+
 [sub_resource type="Animation" id="Animation_k3rb4"]
 resource_name = "flicker"
 loop_mode = 1
@@ -22,25 +37,37 @@ tracks/0/keys = {
 "values": [5.0, 8.0, 5.0]
 }
 
-[sub_resource type="Animation" id="Animation_qtebd"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_igqak"]
+_data = {
+"RESET": SubResource("Animation_qtebd"),
+"flicker": SubResource("Animation_k3rb4")
+}
+
+[sub_resource type="Animation" id="Animation_kbya0"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Glow:light_specular")
+tracks/0/path = NodePath("UFOModel:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [5.0]
+"values": [Vector3(0, 0, 0)]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_igqak"]
-_data = {
-"RESET": SubResource("Animation_qtebd"),
-"flicker": SubResource("Animation_k3rb4")
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UFOModel:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_sffow"]
@@ -72,33 +99,6 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 1.39626, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_kbya0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("UFOModel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UFOModel:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r2d4f"]
 _data = {
 "RESET": SubResource("Animation_kbya0"),
@@ -108,9 +108,11 @@ _data = {
 [node name="UFO" type="StaticBody3D"]
 collision_layer = 8
 collision_mask = 0
+input_ray_pickable = false
 metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("CylinderShape3D_am2i0")
 metadata/_edit_lock_ = true
 
@@ -118,13 +120,13 @@ metadata/_edit_lock_ = true
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="Glow" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0069949, -0.428617, -0.00385511)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.43, 0)
 light_color = Color(0.65098, 0.380392, 0.227451, 1)
 light_energy = 10.0
 light_volumetric_fog_energy = 10.0
 light_specular = 5.0
 light_bake_mode = 1
-omni_range = 2.02665
+omni_range = 2.0
 metadata/_edit_lock_ = true
 
 [node name="Flicker" type="AnimationPlayer" parent="."]

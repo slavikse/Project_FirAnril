@@ -30,7 +30,7 @@ func _on_shot_delay_timeout() -> void:
     _shot_node.play('shooting')
 
 func _on_ball_body_entered(body_node: Node3D) -> void:
-    if body_node.is_in_group(GConst.GROUPS.Wall)\
+    if body_node.is_in_group(GConst.GROUPS.Barrier)\
     and _is_destruction_effect:
         _start_collision()
 

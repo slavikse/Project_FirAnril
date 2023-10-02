@@ -14,10 +14,12 @@ script = ExtResource("1_olap0")
 metadata/_edit_lock_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape3D_cp2j8")
 metadata/_edit_lock_ = true
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.815, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_7erwl")
 metadata/_edit_lock_ = true
