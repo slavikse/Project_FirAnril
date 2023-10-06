@@ -1,8 +1,9 @@
 extends Node
 
 const GROUPS := {
-    'Player': 'Player',
-    'Floor': 'Floor',
-    'Wall': 'Wall',
-    'Barrier': 'Barrier',
+    'PLAYER': 'PLAYER',
+    'FLOOR': 'FLOOR',
+    'WALL': 'WALL',
+    'BARRIER': 'BARRIER',
+    'INTERACTIVE': 'INTERACTIVE',
 }

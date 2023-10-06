@@ -21,6 +21,7 @@ metadata/_edit_lock_ = true
 [node name="ColumnBrick" parent="." instance=ExtResource("2_hes6y")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -3.1, 0)
 collision_layer = 0
+metadata/_edit_lock_ = true
 
 [node name="Columns" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17.95, 0)

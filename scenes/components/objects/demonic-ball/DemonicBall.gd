@@ -20,7 +20,7 @@ func _ready() -> void:
     _start_delay()
 
 func _start_delay() -> void:
-    _shot_node.play('ready_position')
+    _shot_node.play('ready-position')
     var wait_time := GNumber.get_random_range_int(_DELAY_SHOT[0], _DELAY_SHOT[1])
     _shot_delay_node.start(wait_time)
 
@@ -30,7 +30,8 @@ func _on_shot_delay_timeout() -> void:
     _shot_node.play('shooting')
 
 func _on_ball_body_entered(body_node: Node3D) -> void:
-    if body_node.is_in_group(GConst.GROUPS.Barrier)\
+    if (body_node.is_in_group(GConst.GROUPS.WALL)
+    or body_node.is_in_group(GConst.GROUPS.BARRIER))\
     and _is_destruction_effect:
         _start_collision()
 

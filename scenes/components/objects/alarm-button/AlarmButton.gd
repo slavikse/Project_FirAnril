@@ -1,7 +1,9 @@
 extends StaticBody3D
 
-func _ready() -> void:
-    pass # Replace with function body.
+# TODO добавить обработку нажатия клавиши. если в момент, когда приблизился к кнопке нажал Е,
+# то сработает нажатие красной кнопки.
+# еще уведомление на экране, что элемент интерактивный и можно нажать клавишу Е
 
-func _process(_delta: float) -> void:
-    pass
+# interface
+func interact() -> void:
+    print('interact')

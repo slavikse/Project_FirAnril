@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bd6jqhg5jtskw"]
+[gd_scene load_steps=14 format=3 uid="uid://bd6jqhg5jtskw"]
 
 [ext_resource type="Script" path="res://scenes/components/objects/demonic-ball/DemonicBall.gd" id="1_myssn"]
 [ext_resource type="PackedScene" uid="uid://ci7kfws1k26yq" path="res://assets/models/demonic-ball/scene.gltf" id="2_4qpnu"]
@@ -19,21 +19,6 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_whiea"]
-resource_name = "ready_position"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Ball:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, -2), Vector3(0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_ynkgs"]
 resource_name = "shooting"
 tracks/0/type = "value"
@@ -49,21 +34,27 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 2, 21)]
 }
 
+[sub_resource type="Animation" id="Animation_whiea"]
+resource_name = "ready-position"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ball:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -2), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w3woe"]
 _data = {
 "RESET": SubResource("Animation_bxhh1"),
-"ready_position": SubResource("Animation_whiea"),
+"ready-position": SubResource("Animation_whiea"),
 "shooting": SubResource("Animation_ynkgs")
 }
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qp5jv"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6il8b"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_l4ofw"]
-material = SubResource("StandardMaterial3D_6il8b")
-radial_segments = 8
-rings = 4
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mih8v"]
 radius = 0.53
@@ -126,15 +117,6 @@ one_shot = true
 [node name="DelayRestart" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
-
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.04661)
-visible = false
-cast_shadow = 0
-emitting = false
-amount = 30
-process_material = SubResource("ParticleProcessMaterial_qp5jv")
-draw_pass_1 = SubResource("SphereMesh_l4ofw")
 
 [node name="Ball" type="RigidBody3D" parent="."]
 collision_layer = 8
