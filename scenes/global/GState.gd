@@ -1,3 +1,13 @@
 extends Node
 
-# todo хранить состояние игрока: какие способности ему доступны и прочее.
+var SKILLS := {
+    'MOVE_SPEED': 220.0,
+    'JUMP_ACCELERATION': 500.0,
+    'QUANTITY_JUMPS': 2,
+    'QUANTITY_BOUNCES': 1,
+    'GRAVITY': 16.0,
+    'SLOWING_DOWN_FALL': 0.1,
+    'DASH_SPEED': 15.0,
+    'DASH_ACCELERATION': 40.0,
+    'QUANTITY_DASHES': 1,
+}

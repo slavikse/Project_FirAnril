@@ -1,7 +1,5 @@
-const _MOVE_SPEED := 220.0
-
 func apply_to_movement(move_direction: Vector3, velocity: Vector3, delta: float) -> Vector3:
-    var move_speed := _MOVE_SPEED * delta
+    var move_speed := (GState.SKILLS.MOVE_SPEED as float) * delta
     if move_direction == Vector3.ZERO:
         velocity = _stopping(velocity, move_speed)
     else:

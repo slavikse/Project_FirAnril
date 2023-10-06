@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scenes/components/objects/alarm-button/AlarmButton.gd" id="1_4c03c"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_51vmo"]
-size = Vector3(1.10725, 1.79062, 0.561241)
+size = Vector3(1.10725, 1.79062, 0.637174)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ti6h7"]
 size = Vector3(1, 1, 0.3)
@@ -26,6 +26,7 @@ transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 
 metadata/_edit_lock_ = true
 
 [node name="Interactive" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.114791)
 collision_layer = 16
 collision_mask = 0
 input_ray_pickable = false

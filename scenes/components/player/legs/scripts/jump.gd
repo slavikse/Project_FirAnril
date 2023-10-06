@@ -1,19 +1,15 @@
-const _JUMP_ACCELERATION := 500.0
-const _QUANTITY_JUMPS := 2
-const _QUANTITY_BOUNCES := 1
-
 var _quantity_jumps := 0
 var _quantity_bounces := 0
 
 func jump(is_floor: bool, is_wall: bool, velocity: Vector3, delta: float) -> Vector3:
-    var jump_acceleration := _JUMP_ACCELERATION * delta
+    var jump_acceleration := (GState.SKILLS.JUMP_ACCELERATION as float) * delta
     _floor_touched(is_floor)
     return _can_jump(is_wall, velocity, jump_acceleration)
 
 func _floor_touched(is_floor: bool) -> void:
     if is_floor:
-        _quantity_jumps = _QUANTITY_JUMPS
-        _quantity_bounces = _QUANTITY_BOUNCES
+        _quantity_jumps = GState.SKILLS.QUANTITY_JUMPS as int
+        _quantity_bounces = GState.SKILLS.QUANTITY_BOUNCES as int
 
 func _can_jump(is_wall: bool, velocity: Vector3, jump_acceleration: float) -> Vector3:
     if is_wall:

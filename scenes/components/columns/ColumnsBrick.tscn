@@ -64,5 +64,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0145813, 14.0265, 0.
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0145813, 16.0265, 0.00243449)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="body_entered" from="Columns" to="." method="_on_columns_body_entered"]
 [connection signal="body_exited" from="Columns" to="." method="_on_columns_body_exited"]

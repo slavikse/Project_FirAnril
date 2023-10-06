@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bk6r3bmbf83r2" path="res://assets/models/metal-vent/scene.gltf" id="1_f3bg6"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_mlalj"]
-height = 0.0355507
+height = 0.0660202
 radius = 0.489934
 
 [sub_resource type="Animation" id="Animation_n1cqy"]
@@ -53,7 +53,6 @@ metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.10715e-10, 0, 0.0125329)
-visible = false
 shape = SubResource("CylinderShape3D_mlalj")
 metadata/_edit_lock_ = true
 

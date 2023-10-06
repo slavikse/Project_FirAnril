@@ -1,7 +1,7 @@
 extends Camera3D
 class_name PlayerHead
 
-const _DOWN_LIMIT := -75.0
+const _DOWN_LIMIT := -90.0
 const _TOP_LIMIT := 90.0
 const _MOUSE_SENSITIVITY := 0.15
 

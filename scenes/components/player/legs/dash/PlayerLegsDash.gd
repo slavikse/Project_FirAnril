@@ -3,11 +3,7 @@ class_name PlayerLegsDash
 
 signal dashed(is_dash: bool)
 
-const _ACCELERATION := 40.0
-const _SPEED := 15.0
-const _QUANTITY_DASHES := 1
-
-var _quantity_dashes := _QUANTITY_DASHES
+var _quantity_dashes := GState.SKILLS.QUANTITY_DASHES as int
 var _acceleration := Vector3.ZERO
 
 @onready var _dash_timeout_node := $DashTimeout as Timer
@@ -19,15 +15,15 @@ func dash_init(move_direction: Vector3, is_floor: bool, delta: float) -> void:
 
 func _dash_start(move_direction: Vector3, delta: float) -> void:
     _dash_timeout_node.start()
-    _acceleration = move_direction * _ACCELERATION * delta
+    _acceleration = move_direction * (GState.SKILLS.DASH_ACCELERATION as float) * delta
     dashed.emit(true)
 
 func _on_dash_timeout_timeout() -> void:
     dashed.emit(false)
 
 func reset_quantity_dashes() -> void:
-    _quantity_dashes = _QUANTITY_DASHES
+    _quantity_dashes = GState.SKILLS.QUANTITY_DASHES as int
 
 # todo add easing function
 func dash(player_position: Vector3, delta: float) -> Vector3:
-    return player_position.lerp(player_position + _acceleration, _SPEED * delta)
+    return player_position.lerp(player_position + _acceleration, (GState.SKILLS.DASH_SPEED as float) * delta)
