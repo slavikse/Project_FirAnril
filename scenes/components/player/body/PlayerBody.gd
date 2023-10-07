@@ -19,19 +19,13 @@ func _on_body_exited(body_node: StaticBody3D) -> void:
     if body_node.is_in_group(GConst.GROUPS.WALL):
         _is_bounce_buffer = false
 
-# todo
-func _on_area_entered(interact_node: Area3D) -> void:
-    if interact_node.is_in_group(GConst.GROUPS.INTERACTIVE):
-        var acting_node := interact_node.get_parent()
-        if acting_node.has_method('interact'):
-            acting_node.interact()
-        else:
-            print('It is necessary to implement the method "interact": ', interact_node)
+func _on_area_entered(body_node: Area3D) -> void:
+    if body_node.is_in_group(GConst.GROUPS.INTERACTIVE):
+        body_node.start_interact()
 
-# todo
-func _on_area_exited(area_node: Area3D) -> void:
-    if area_node.is_in_group(GConst.GROUPS.INTERACTIVE):
-        print('_on_area_exited', area_node)
+func _on_area_exited(body_node: Area3D) -> void:
+    if body_node.is_in_group(GConst.GROUPS.INTERACTIVE):
+        body_node.end_interact()
 
 func has_bounce_buffer(is_floor: bool) -> bool:
     if is_floor:

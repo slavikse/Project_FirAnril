@@ -112,12 +112,12 @@ input_ray_pickable = false
 metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
-visible = false
 shape = SubResource("CylinderShape3D_am2i0")
 metadata/_edit_lock_ = true
 
 [node name="UFOModel" parent="." instance=ExtResource("1_r34ub")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+metadata/_edit_lock_ = true
 
 [node name="Glow" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.43, 0)
@@ -127,6 +127,17 @@ light_volumetric_fog_energy = 10.0
 light_specular = 5.0
 light_bake_mode = 1
 omni_range = 2.0
+metadata/_edit_lock_ = true
+
+[node name="Dark" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28974, 0)
+light_energy = 5.0
+light_indirect_energy = 2.0
+light_volumetric_fog_energy = 3.0
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 1
+omni_range = 3.20663
 metadata/_edit_lock_ = true
 
 [node name="Flicker" type="AnimationPlayer" parent="."]

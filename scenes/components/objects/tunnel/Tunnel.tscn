@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://crtke2qwbquvf"]
+[gd_scene load_steps=2 format=3 uid="uid://crtke2qwbquvf"]
 
 [ext_resource type="PackedScene" uid="uid://cn3h0o7ggt6vq" path="res://assets/models/tunnel/scene.gltf" id="1_vssy0"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_e6a0e"]
-size = Vector3(2.17162, 0.001, 6.73239)
 
 [node name="Tunnel" type="StaticBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
@@ -12,78 +9,107 @@ collision_mask = 0
 input_ray_pickable = false
 metadata/_edit_group_ = true
 
-[node name="Collision_top_1" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.998805, 0, 0.0488672, 0, 1, 0, -0.0488672, 0, 0.998805, -0.163111, 3.0133, -2.30461)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
+[node name="Collision_1" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(0.998991, 0, 0.0449271, 0, 1, 0, -0.0449271, 0, 0.998991, 3.9484, 0.518924, -0.587479)
+depth = 3.0
+polygon = PackedVector2Array(-4.75279, -0.308187, -5.34713, 0.0605204, -5.88686, 1.16433, -5.5871, 2.45074, -2.33281, 2.44599, -2.08436, 1.14836, -2.4802, 0.220967, -2.81563, -0.209852, -2.02406, 0.578512, -1.99974, 2.40598, -3.24697, 3.47708, -4.968, 3.46223, -6.05516, 2.17455, -5.98296, 0.395688, -4.79466, -0.40757, -3.15069, -0.42246, -2.4803, 0.212261, -3.23551, -0.315123)
 metadata/_edit_lock_ = true
 
-[node name="Collision_top_2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.905421, 0, 0.424516, 0, 1, 0, -0.424516, 0, 0.905421, -1.67501, 3.0133, -8.72891)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
+[node name="Collision_2" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(0.994974, 0, 0.100136, 0, 1, 0, -0.100136, 0, 0.994974, 3.72984, 0.518924, -3.74674)
+depth = 3.0
+polygon = PackedVector2Array(-3.22569, -0.339377, -4.74424, -0.333778, -5.88686, 1.16433, -5.5871, 2.45074, -2.33281, 2.44599, -2.08436, 1.14836, -3.22836, -0.336459, -3.09991, -0.40845, -2.02406, 0.578512, -1.99974, 2.40598, -3.24697, 3.47708, -4.968, 3.46223, -6.05516, 2.17455, -5.98296, 0.395688, -4.79466, -0.40757, -3.10105, -0.408588)
 metadata/_edit_lock_ = true
 
-[node name="Collision_top_3" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.564449, 0, 0.825468, 0, 1, 0, -0.825468, 0, 0.564449, -5.61774, 3.0133, -13.714)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
+[node name="Collision_3" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(0.978163, 0, 0.207844, 0, 1, 0, -0.207844, 0, 0.978163, 3.1935, 0.518923, -7.01927)
+depth = 3.0
+polygon = PackedVector2Array(-3.22569, -0.339377, -4.74424, -0.333778, -5.88686, 1.16433, -5.5871, 2.45074, -2.33281, 2.44599, -2.08436, 1.14836, -3.22836, -0.336459, -3.09991, -0.40845, -2.02406, 0.578512, -1.99974, 2.40598, -3.24697, 3.47708, -4.968, 3.46223, -6.05516, 2.17455, -5.98296, 0.395688, -4.79466, -0.40757, -3.10105, -0.408588)
 metadata/_edit_lock_ = true
 
-[node name="Collision_right_1" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0182333, 0.998639, 0.0488672, -0.999834, -0.0182551, 0, 0.00089208, -0.0488591, 0.998805, 1.12909, 1.97067, -2.29397)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
+[node name="Collision_4" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(0.932356, 0, 0.361544, 0, 1, 0, -0.361544, 0, 0.932356, 2.18852, 0.518924, -10.3631)
+depth = 3.0
+polygon = PackedVector2Array(-3.22569, -0.339377, -4.74424, -0.333778, -5.88686, 1.16433, -5.5871, 2.45074, -2.33281, 2.44599, -2.08436, 1.14836, -3.22836, -0.336459, -3.09991, -0.40845, -2.02406, 0.578512, -1.99974, 2.40598, -3.24697, 3.47708, -4.968, 3.46223, -6.05516, 2.17455, -5.98296, 0.395688, -4.79466, -0.40757, -3.10105, -0.408588)
 metadata/_edit_lock_ = true
 
-[node name="Collision_right_2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0182333, 0.933598, 0.35786, -0.999834, -0.0173448, -0.00569294, 0.00089208, -0.357904, 0.933758, -0.239681, 1.98982, -8.81034)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
+[node name="Collision_5" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(0.81636, 0, 0.577545, 0, 1, 0, -0.577545, 0, 0.81636, 0.454353, 0.518924, -13.6314)
+depth = 3.0
+polygon = PackedVector2Array(-3.22569, -0.339377, -4.74424, -0.333778, -5.88686, 1.16433, -5.5871, 2.45074, -2.33281, 2.44599, -2.08436, 1.14836, -3.22836, -0.336459, -3.09991, -0.40845, -2.02406, 0.578512, -1.99974, 2.40598, -3.24697, 3.47708, -4.968, 3.46223, -6.05516, 2.17455, -5.98296, 0.395688, -4.79466, -0.40757, -3.10105, -0.408588)
 metadata/_edit_lock_ = true
 
-[node name="Collision_right_3" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0182333, 0.610977, 0.791438, -0.999833, -0.0118483, -0.0138877, 0.00089208, -0.79156, 0.611091, -4.12137, 2.05596, -14.0196)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
-metadata/_edit_lock_ = true
-
-[node name="Collision_bottom_1" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.998805, 0, 0.0488672, 0, 1, 0, -0.0488672, 0, 0.998805, -0.163111, 0.158944, -2.30461)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
-metadata/_edit_lock_ = true
-
-[node name="Collision_bottom_2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.905421, 0, 0.424516, 0, 1, 0, -0.424516, 0, 0.905421, -1.67501, 0.158944, -8.72891)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
-metadata/_edit_lock_ = true
-
-[node name="Collision_bottom_3" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.564449, 0, 0.825468, 0, 1, 0, -0.825468, 0, 0.564449, -5.61774, 0.158944, -13.714)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
-metadata/_edit_lock_ = true
-
-[node name="Collision_left_1" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0182333, 0.998639, 0.0488672, -0.999834, -0.0182551, 0, 0.00089208, -0.0488591, 0.998805, -1.68836, 2.02203, -2.31875)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
-metadata/_edit_lock_ = true
-
-[node name="Collision_left_2" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0182333, 0.911069, 0.411851, -0.999834, -0.0169821, -0.00669764, 0.00089208, -0.411905, 0.911227, -3.24436, 2.04464, -8.78364)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
-metadata/_edit_lock_ = true
-
-[node name="Collision_left_3" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0182333, 0.507462, 0.861481, -0.999834, -0.010023, -0.0152574, 0.00089208, -0.861616, 0.50756, -7.5496, 2.11887, -13.581)
-visible = false
-shape = SubResource("BoxShape3D_e6a0e")
+[node name="Collision_6" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(0.555454, 0, 0.831548, 0, 1, 0, -0.831548, 0, 0.555454, -2.47486, 0.518924, -16.5216)
+depth = 3.0
+polygon = PackedVector2Array(-3.22569, -0.339377, -4.74424, -0.333778, -5.88686, 1.16433, -5.5871, 2.45074, -2.33281, 2.44599, -2.08436, 1.14836, -3.22836, -0.336459, -3.09991, -0.40845, -2.02406, 0.578512, -1.99974, 2.40598, -3.24697, 3.47708, -4.968, 3.46223, -6.05516, 2.17455, -5.98296, 0.395688, -4.79466, -0.40757, -3.10105, -0.408588)
 metadata/_edit_lock_ = true
 
 [node name="TunnelModel" parent="." instance=ExtResource("1_vssy0")]
-transform = Transform3D(-2.18557e-10, 0, 0.005, 0, 0.005, 0, -0.005, 0, -2.18557e-10, 0, 0, 0)
+transform = Transform3D(-3.10441e-10, 0, 0.005, 0, 0.005, 0, -0.005, 0, -3.10441e-10, 3.17891e-07, 3.97364e-08, -1.27157e-06)
+metadata/_edit_lock_ = true
+
+[node name="Dark_1" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.62238, -1.24905)
+light_color = Color(0.54902, 0.54902, 0.54902, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 1
+spot_range = 6.0
+spot_angle = 180.0
+metadata/_edit_lock_ = true
+
+[node name="Dark_2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.71348, -4.29956)
+light_color = Color(0.54902, 0.54902, 0.54902, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 1
+spot_range = 6.0
+spot_angle = 180.0
+metadata/_edit_lock_ = true
+
+[node name="Dark_3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.09978, 2.77096, -7.75241)
+light_color = Color(0.54902, 0.54902, 0.54902, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 1
+spot_range = 6.0
+spot_angle = 180.0
+metadata/_edit_lock_ = true
+
+[node name="Dark_4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.6202, 2.79574, -11.1555)
+light_color = Color(0.54902, 0.54902, 0.54902, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 1
+spot_range = 6.0
+spot_angle = 180.0
+metadata/_edit_lock_ = true
+
+[node name="Dark_5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5.19928, 2.79574, -13.8653)
+light_color = Color(0.54902, 0.54902, 0.54902, 1)
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 1
+spot_range = 6.0
+spot_angle = 180.0
 metadata/_edit_lock_ = true

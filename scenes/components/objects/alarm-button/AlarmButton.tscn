@@ -1,19 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://cggtqil5x4w8v"]
+[gd_scene load_steps=4 format=3 uid="uid://cggtqil5x4w8v"]
 
 [ext_resource type="PackedScene" uid="uid://bkqblo8l20bmg" path="res://assets/models/alarm-button/scene.gltf" id="1_3txtr"]
-[ext_resource type="Script" path="res://scenes/components/objects/alarm-button/AlarmButton.gd" id="1_4c03c"]
+[ext_resource type="PackedScene" uid="uid://5fnqwu457i8c" path="res://scenes/components/interactive/Interactive.tscn" id="2_q7shy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_51vmo"]
 size = Vector3(1.10725, 1.79062, 0.637174)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ti6h7"]
-size = Vector3(1, 1, 0.3)
 
 [node name="AlarmButton" type="StaticBody3D"]
 collision_layer = 8
 collision_mask = 0
 input_ray_pickable = false
-script = ExtResource("1_4c03c")
 metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
@@ -25,17 +21,8 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 2, -1, 0)
 metadata/_edit_lock_ = true
 
-[node name="Interactive" type="Area3D" parent="." groups=["INTERACTIVE"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.114791)
-collision_layer = 16
-collision_mask = 0
-input_ray_pickable = false
-metadata/_edit_lock_ = true
-
-[node name="Collision" type="CollisionShape3D" parent="Interactive"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0.55)
-shape = SubResource("BoxShape3D_ti6h7")
-metadata/_edit_lock_ = true
+[node name="Interactive" parent="." instance=ExtResource("2_q7shy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0824066, 0.564135)
 
 [node name="RedButton" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0487743, 0.100816, 0.630669)

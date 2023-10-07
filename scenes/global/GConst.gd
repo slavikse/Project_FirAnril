@@ -7,3 +7,9 @@ const GROUPS := {
     'BARRIER': 'BARRIER',
     'INTERACTIVE': 'INTERACTIVE',
 }
+
+# todo
+#const INTERACT := {
+#    'BUTTON': '[E]',
+#    'ALARM': '',
+#}

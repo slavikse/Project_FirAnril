@@ -59,7 +59,7 @@ metadata/_edit_lock_ = true
 [node name="MetalVentModel" parent="." instance=ExtResource("1_f3bg6")]
 metadata/_edit_lock_ = true
 
-[node name="Open" type="AnimationPlayer" parent="."]
+[node name="OpenDoor" type="AnimationPlayer" parent="."]
 autoplay = "open"
 libraries = {
 "": SubResource("AnimationLibrary_04fyd")

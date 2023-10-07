@@ -234,31 +234,27 @@ directional_shadow_mode = 0
 sky_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="MetalWallLamp_2" parent="Lights" instance=ExtResource("6_sqkvf")]
+[node name="MetalWallLamp_1" parent="Lights" instance=ExtResource("6_sqkvf")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0013, 26.5216, 7.37553)
 is_blink = true
 metadata/_edit_lock_ = true
 
-[node name="MetalWallLamp_3" parent="Lights" instance=ExtResource("6_sqkvf")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0013, 10.2659, -2.37065)
+[node name="MetalWallLamp_2" parent="Lights" instance=ExtResource("6_sqkvf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0013, 13.734, -2.37065)
 is_blink = true
+metadata/_edit_lock_ = true
+
+[node name="MetalWallLamp_3" parent="Lights" instance=ExtResource("6_sqkvf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.0035, 7.76884, -2.37066)
 metadata/_edit_lock_ = true
 
 [node name="MetalWallLamp_4" parent="Lights" instance=ExtResource("6_sqkvf")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.0035, 10.2659, -2.37066)
-metadata/_edit_lock_ = true
-
-[node name="MetalWallLamp_5" parent="Lights" instance=ExtResource("6_sqkvf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.938, 10.266, -14.0045)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.938, 12.5452, -14.0045)
 is_blink = true
 metadata/_edit_lock_ = true
 
-[node name="MetalWallLamp_6" parent="Lights" instance=ExtResource("6_sqkvf")]
+[node name="MetalWallLamp_5" parent="Lights" instance=ExtResource("6_sqkvf")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.938, 10.266, 10.0073)
-metadata/_edit_lock_ = true
-
-[node name="SpotProjector_1" parent="Lights" instance=ExtResource("8_xt4me")]
-transform = Transform3D(0.99882, 4.24467e-09, 0.0485534, 2.77554e-17, -0.999999, 8.74227e-08, 0.0485534, -8.73196e-08, -0.99882, 1.67371, 28.2798, -1.94618)
 metadata/_edit_lock_ = true
 
 [node name="Objects" type="Node3D" parent="."]
@@ -266,19 +262,15 @@ metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="ColumnBrick" parent="Objects" instance=ExtResource("5_1ys0y")]
-transform = Transform3D(0.707107, 1.0677e-07, -0.707107, 1.50996e-07, -1, 0, -0.707107, -1.0677e-07, -0.707107, 1.65185, 33.4845, -1.93002)
+transform = Transform3D(0.707107, 1.0677e-07, -0.707107, 1.50996e-07, -1, -3.55271e-15, -0.707107, -1.0677e-07, -0.707107, 1.65185, 32.6167, -3.02012)
 metadata/_edit_lock_ = true
 
-[node name="BladePropeller" parent="Objects" instance=ExtResource("7_cwwtf")]
-transform = Transform3D(212.594, 111.373, -4.86826e-06, 0, -1.04907e-05, -240, -111.373, 212.594, -9.29276e-06, 5.00022, 16.9399, 4.27667)
+[node name="BladePropeller" parent="Objects/ColumnBrick" instance=ExtResource("7_cwwtf")]
+transform = Transform3D(229.018, 3.6239e-05, -71.7697, 3.45808e-05, -240, -1.08369e-05, -71.7699, 1.04346e-11, -229.018, 0.0997839, 6.44692, -0.065032)
 metadata/_edit_lock_ = true
 
-[node name="ColumnBrick_1" parent="Objects/BladePropeller" instance=ExtResource("5_1ys0y")]
-transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0054745, 4.61182e-05)
-metadata/_edit_lock_ = true
-
-[node name="ColumnBrick_2" parent="Objects/BladePropeller" instance=ExtResource("5_1ys0y")]
-transform = Transform3D(-0.00188562, 5.55112e-17, 0.00188562, 0, 0.00266667, -6.66134e-16, -0.00188562, -1.11022e-16, -0.00188562, 0.000129973, 0.0189377, 4.61182e-05)
+[node name="SpotProjector" parent="Objects/ColumnBrick/BladePropeller" instance=ExtResource("8_xt4me")]
+transform = Transform3D(0.00416429, -1.22806e-11, -0.000140475, -9.58718e-18, -0.00416665, 3.64261e-10, -0.00014047, -3.64054e-10, -0.00416429, -9.37721e-05, 9.26107e-05, 0.000118337)
 metadata/_edit_lock_ = true
 
 [node name="Cannons" type="Node3D" parent="Objects"]
@@ -334,20 +326,23 @@ transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.4
 transform = Transform3D(0.00104701, -1.2, 5.24535e-08, 6.39488e-14, -5.24536e-08, -1.2, 1.2, 0.00104701, -4.55838e-11, 0.0616386, 3.92863, -28.8336)
 metadata/_edit_lock_ = true
 
+[node name="Cannon_6" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.675938, 4.85616, -18.5319)
+
 [node name="Tunnel_1" parent="Objects" instance=ExtResource("8_ie1qp")]
-transform = Transform3D(-1.49926, 0, 0.047116, 0, 1.5, 0, -0.047116, 0, -1.49926, 10.4, 22.795, 20.6)
+transform = Transform3D(-1.49926, 0, 0.047116, 0, 1.5, 0, -0.047116, 0, -1.49926, 10.4, 22.7656, 20.6)
 metadata/_edit_lock_ = true
 
 [node name="TunnelSection_1" parent="Objects/Tunnel_1" instance=ExtResource("12_15jxt")]
-transform = Transform3D(-1.13277, 0, -0.0355988, 0, 1.13333, 0, 0.0355988, 0, -1.13277, -2.08254, 2.01054, -0.557405)
+transform = Transform3D(-1.13277, 0, -0.0355988, 0, 1.13333, 0, 0.0355988, 0, -1.13277, -1.96829, 1.97278, 2.5939)
 metadata/_edit_lock_ = true
 
 [node name="TunnelSection_2" parent="Objects/Tunnel_1" instance=ExtResource("12_15jxt")]
-transform = Transform3D(-1.32934, 0, -0.0417762, 0, 1.33, 0, 0.0417762, 0, -1.32934, -2.44927, 2.01054, -0.857827)
+transform = Transform3D(-1.32934, 0, -0.0417763, 0, 1.33, 0, 0.0417763, 0, -1.32934, -2.33503, 1.97278, 2.29348)
 metadata/_edit_lock_ = true
 
 [node name="MetalVent" parent="Objects/Tunnel_1" instance=ExtResource("14_aqqpq")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.0380969, 1.889, 1.21227)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.132488, 1.889, 4.21584)
 
 [node name="Tunnel_2" parent="Objects" instance=ExtResource("8_ie1qp")]
 transform = Transform3D(-1.18645, 0.204853, 0.894625, 0.184934, 1.48553, -0.0948986, -0.898954, 0.0352362, -1.20026, -5.21864, 22.4181, -14.9983)
@@ -365,7 +360,7 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-0.702451, 0, 0.711732, 0, 1, 0, -0.711732, 0, -0.702451, -7.05853, 1.35753, 6.38649)
 
 [node name="UFO" parent="Objects" instance=ExtResource("13_0soib")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.177025, 25.1876, 5.57046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.62656, 25.8681, -5.39339)
 
 [node name="Player" parent="." instance=ExtResource("11_mmrub")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0289803, 2.00539, -0.0211763)

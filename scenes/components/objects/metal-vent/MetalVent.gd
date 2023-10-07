@@ -1,4 +1,6 @@
 extends StaticBody3D
 
-func _ready() -> void:
-    pass # Replace with function body.
+@onready var _open_door_node := $OpenDoor as AnimationPlayer
+
+func open() -> void:
+    _open_door_node.play('open')
