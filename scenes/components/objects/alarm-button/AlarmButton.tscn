@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cggtqil5x4w8v"]
+[gd_scene load_steps=5 format=3 uid="uid://cggtqil5x4w8v"]
 
 [ext_resource type="PackedScene" uid="uid://bkqblo8l20bmg" path="res://assets/models/alarm-button/scene.gltf" id="1_3txtr"]
+[ext_resource type="Script" path="res://scenes/components/objects/alarm-button/AlarmButton.gd" id="1_p8cw2"]
 [ext_resource type="PackedScene" uid="uid://5fnqwu457i8c" path="res://scenes/components/interactive/Interactive.tscn" id="2_q7shy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_51vmo"]
@@ -10,6 +11,7 @@ size = Vector3(1.10725, 1.79062, 0.637174)
 collision_layer = 8
 collision_mask = 0
 input_ray_pickable = false
+script = ExtResource("1_p8cw2")
 metadata/_edit_group_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]
@@ -23,6 +25,8 @@ metadata/_edit_lock_ = true
 
 [node name="Interactive" parent="." instance=ExtResource("2_q7shy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0824066, 0.564135)
+message = "Нажми на кнопку"
+button = "E"
 
 [node name="RedButton" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0487743, 0.100816, 0.630669)
@@ -30,3 +34,5 @@ light_color = Color(0.627451, 0, 0, 1)
 light_energy = 2.0
 omni_range = 0.430116
 metadata/_edit_lock_ = true
+
+[connection signal="interact" from="Interactive" to="." method="_on_interactive_interact"]

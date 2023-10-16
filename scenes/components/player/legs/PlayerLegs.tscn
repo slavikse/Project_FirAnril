@@ -9,4 +9,5 @@ metadata/_edit_lock_ = true
 
 [node name="PlayerLegsDash" parent="." instance=ExtResource("2_8f6bp")]
 
+[connection signal="dashed" from="." to="." method="_on_dashed"]
 [connection signal="dashed" from="PlayerLegsDash" to="." method="_on_player_legs_dash_dashed"]
