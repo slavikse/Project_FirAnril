@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://5fnqwu457i8c"]
 
-[ext_resource type="Script" path="res://scenes/components/objects/alarm-button/Interactive.gd" id="1_1pev6"]
+[ext_resource type="Script" path="res://scenes/components/objects/interactive/Interactive.gd" id="1_d58rj"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u40c5"]
 
@@ -8,7 +8,7 @@
 collision_layer = 16
 collision_mask = 0
 input_ray_pickable = false
-script = ExtResource("1_1pev6")
+script = ExtResource("1_d58rj")
 metadata/_edit_lock_ = true
 
 [node name="Collision" type="CollisionShape3D" parent="."]

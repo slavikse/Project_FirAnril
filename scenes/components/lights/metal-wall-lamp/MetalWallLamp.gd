@@ -3,7 +3,7 @@ extends StaticBody3D
 @export var is_glow := true
 @export var is_blink := false
 
-const _DELAY_BLINK := [1, 3]
+var _DELAY_BLINK: Array[int] = [1, 3]
 
 @onready var _glow_node := $Glow as OmniLight3D
 @onready var _glow_start_node := $Glow/Start as Timer
@@ -12,6 +12,7 @@ const _DELAY_BLINK := [1, 3]
 func _ready() -> void:
     _can_glow()
     _can_blink()
+    _DELAY_BLINK.append('f')
 
 func _can_glow() -> void:
     if not is_glow:

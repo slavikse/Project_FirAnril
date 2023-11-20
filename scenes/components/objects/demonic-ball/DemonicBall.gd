@@ -1,7 +1,7 @@
 extends Node3D
 
 # Минимальное значение должно быть больше времени анимации shot:init
-const _DELAY_SHOT := [4, 6]
+const _DELAY_SHOT: Array[int] = [4, 6]
 
 var _start_position := Vector3.ZERO
 var _is_destruction_effect := false

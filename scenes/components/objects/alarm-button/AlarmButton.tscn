@@ -2,12 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://bkqblo8l20bmg" path="res://assets/models/alarm-button/scene.gltf" id="1_3txtr"]
 [ext_resource type="Script" path="res://scenes/components/objects/alarm-button/AlarmButton.gd" id="1_p8cw2"]
-[ext_resource type="PackedScene" uid="uid://5fnqwu457i8c" path="res://scenes/components/interactive/Interactive.tscn" id="2_q7shy"]
+[ext_resource type="PackedScene" uid="uid://5fnqwu457i8c" path="res://scenes/components/objects/interactive/Interactive.tscn" id="2_q7shy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_51vmo"]
 size = Vector3(1.10725, 1.79062, 0.637174)
 
 [node name="AlarmButton" type="StaticBody3D"]
+top_level = true
 collision_layer = 8
 collision_mask = 0
 input_ray_pickable = false

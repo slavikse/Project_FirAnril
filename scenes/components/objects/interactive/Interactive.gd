@@ -2,6 +2,11 @@ extends Area3D
 
 signal interact()
 
+# todo реализовать - единичный тык
+@export var is_once := false
+#@export var is_delay := false
+#@export var delay_time := 0.0
+
 # todo интернациализация. сюда должно быть передано, какую реакцию вызовет и на какую кнопку
 @export var message := ''
 @export var button := ''

@@ -317,7 +317,7 @@ transform = Transform3D(0.00104701, -1.2, 5.24536e-08, 6.39488e-14, -5.24536e-08
 metadata/_edit_lock_ = true
 
 [node name="Cannon_5" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.3404, 13.4591, -1.36697)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.3404, 14.7307, -1.36697)
 
 [node name="DemonicBall" parent="Objects/Cannons/Cannon_5" instance=ExtResource("10_b0drw")]
 transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
@@ -327,7 +327,14 @@ transform = Transform3D(0.00104701, -1.2, 5.24535e-08, 6.39488e-14, -5.24536e-08
 metadata/_edit_lock_ = true
 
 [node name="Cannon_6" parent="Objects/Cannons" instance=ExtResource("9_f3lgk")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.675938, 4.85616, -18.5319)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.675938, 3.62368, -18.5319)
+
+[node name="DemonicBall" parent="Objects/Cannons/Cannon_6" instance=ExtResource("10_b0drw")]
+transform = Transform3D(-1, 0, -8.74227e-08, 0, 1, 0, 8.74227e-08, 0, -1, 0, 2.43, -7.35)
+
+[node name="WallBarrier" parent="Objects/Cannons/Cannon_6" instance=ExtResource("3_ardpw")]
+transform = Transform3D(0.00104701, -1.2, 5.24535e-08, 6.39488e-14, -5.24536e-08, -1.2, 1.2, 0.00104701, -4.55838e-11, 0.0616386, 3.92863, -28.8336)
+metadata/_edit_lock_ = true
 
 [node name="Tunnel_1" parent="Objects" instance=ExtResource("8_ie1qp")]
 transform = Transform3D(-1.49926, 0, 0.047116, 0, 1.5, 0, -0.047116, 0, -1.49926, 10.4, 22.7656, 20.6)
