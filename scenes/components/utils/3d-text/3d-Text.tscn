@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://brpvwru0rrgum"]
+
+[ext_resource type="Script" path="res://scenes/components/utils/3d-text/3d-Text.gd" id="1_1qh30"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_c7dyg"]
+viewport_path = NodePath("SubViewport")
+
+[node name="3dText" type="Sprite3D"]
+texture = SubResource("ViewportTexture_c7dyg")
+script = ExtResource("1_1qh30")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Label" type="Label" parent="SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "TEXT"

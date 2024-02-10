@@ -60,7 +60,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="OpenDoor" type="AnimationPlayer" parent="."]
-autoplay = "open"
 libraries = {
 "": SubResource("AnimationLibrary_04fyd")
 }
+autoplay = "open"
